@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_01_21_223111) do
+ActiveRecord::Schema.define(version: 2021_01_22_200002) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -49,6 +49,24 @@ ActiveRecord::Schema.define(version: 2021_01_21_223111) do
     t.index ["show_id"], name: "index_characters_on_show_id"
   end
 
+  create_table "creative_shows", force: :cascade do |t|
+    t.bigint "creative_id", null: false
+    t.bigint "show_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["creative_id"], name: "index_creative_shows_on_creative_id"
+    t.index ["show_id"], name: "index_creative_shows_on_show_id"
+  end
+
+  create_table "creatives", force: :cascade do |t|
+    t.string "name"
+    t.string "bio"
+    t.string "website"
+    t.string "image"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
   create_table "shows", force: :cascade do |t|
     t.string "name"
     t.string "description"
@@ -63,4 +81,6 @@ ActiveRecord::Schema.define(version: 2021_01_21_223111) do
   add_foreign_key "actor_characters", "actors"
   add_foreign_key "actor_characters", "characters"
   add_foreign_key "characters", "shows"
+  add_foreign_key "creative_shows", "creatives"
+  add_foreign_key "creative_shows", "shows"
 end
