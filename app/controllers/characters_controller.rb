@@ -26,6 +26,17 @@ class CharactersController < ApplicationController
   def edit
   end
 
+  def update
+    character = Character.find(params[:id])
+    character.update(character_params(:character_id, :character_id))
+    if character.valid?
+      redirect_to character_path(character)
+    else
+      flash[:message] = character.errors.full_messages 
+      redirect_to new_character_path
+    end
+  end
+
   private
 
   def set_character

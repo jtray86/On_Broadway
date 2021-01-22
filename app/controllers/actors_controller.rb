@@ -35,7 +35,7 @@ class ActorsController < ApplicationController
     else
       flash[:message] = actor.errors.full_messages 
       redirect_to new_actor_path
-    
+    end
   end
 
   private

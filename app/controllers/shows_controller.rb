@@ -26,6 +26,17 @@ class ShowsController < ApplicationController
   def edit
   end
 
+  def update
+    show = Show.find(params[:id])
+    show.update(show_params(:show_id, :character_id))
+    if show.valid?
+      redirect_to show_path(show)
+    else
+      flash[:message] = show.errors.full_messages 
+      redirect_to new_show_path
+    end
+  end
+
   private
 
   def set_show

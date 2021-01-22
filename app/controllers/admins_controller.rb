@@ -26,6 +26,17 @@ class AdminsController < ApplicationController
   def edit
   end
 
+  def update
+    admin = Admin.find(params[:id])
+    admin.update(admin_params(:admin_id, :character_id))
+    if admin.valid?
+      redirect_to admin_path(admin)
+    else
+      flash[:message] = admin.errors.full_messages 
+      redirect_to new_admin_path
+    end
+  end
+
   private
 
   def set_admin
