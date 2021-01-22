@@ -8,6 +8,17 @@
 
 <p> NOW PLAYING AT - <%=@show.theater%> </p>
 
+<h3> CAST AND CREATIVE </h3>
+
+    <ul>
+        <%@show.characters.each do |character|%>
+            <li>
+                <% actor = character.actors.map{|actor| actor.name}%>
+                <%= link_to character.name, character_path(character) %> Played By --- <%= link_to character.actors[0].name, actor_path(character.actors[0].id) %>
+            </li>
+        <%end%>
+    </ul>
+
 <p> For Showtimes and Ticketing Please Visit Us At: <%=@show.website%></p>
 
 

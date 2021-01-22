@@ -5,9 +5,15 @@
         <% @admin.shows.each do |show| %>
             <li>
                 <%= link_to show.name, show_path(show) %>
+                <%= button_to "Edit #{show.name}'s Profile", edit_show_path(show), method: "get"%>
+                <%= button_to "Add Characters to #{show.name}", new_character_path, method: "get" %> 
             </li>
         <%end%>
     </ul>
+
+
+<%= button_to "New Show", new_show_path, method: "get" %>
+
 
 
 
