@@ -32,7 +32,7 @@ class AdminsController < ApplicationController
     @admin = Admin.find(params[:id])
   end
 
-  def admin_params
+  def admin_params(*args)
     params.require(:admin).permit(:name, :password)
   end
 

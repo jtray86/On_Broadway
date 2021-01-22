@@ -20,7 +20,7 @@ end
 10.times do 
     name = Faker::Name.unique.name
     description = Faker::Lorem.paragraphs(number: 1)
-    show = rand(5)
+    show = rand(1..5)
     Character.create(name: name, description: description, show_id: show)
 end
 
@@ -30,7 +30,7 @@ end
     theater = Faker::Restaurant.name 
     website = Faker::Internet.domain_name 
     image = Faker::LoremFlickr.image(size: "50x60")
-    admin = rand(5)
+    admin = rand(1..5)
     Show.create(name: name, description: description, theater: theater, website: website, image: image, admin_id: admin)
 end
 

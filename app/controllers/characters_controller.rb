@@ -14,7 +14,7 @@ class CharactersController < ApplicationController
   end
 
   def create
-    @character = Character.create(character_params(:name, :description))
+    @character = Character.create(character_params(:name, :description, :show_id))
         if @character.valid?
           redirect_to character_path(@character)
         else
@@ -32,8 +32,8 @@ class CharactersController < ApplicationController
     @character = Character.find(params[:id])
   end
 
-  def character_params
-    params.require(:character).permit(:name, :description)
+  def character_params(*args)
+    params.require(:character).permit(:name, :description, :show_id)
   end
 
 

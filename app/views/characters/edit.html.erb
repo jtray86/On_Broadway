@@ -1,2 +1,19 @@
-<h1>Characters#edit</h1>
-<p>Find me in app/views/characters/edit.html.erb</p>
+<h1>Edit Character</h1>
+<%= form_for @character do |f|%>
+
+<%=f.label :name%>
+<%=f.text_field :name%>
+<br>
+<%=f.label :description%>
+<%=f.text_field :description%>
+<br>
+<%=f.label :show_id%>
+<%=f.collection_select :show_id, Show.all, :id, :name%>
+<br>
+<%=f.submit "Edit Character"%>
+<%end%>
+
+<%if flash[:message]%>
+<%flash[:message].each do |message|%>
+<p><%=message%></p>
+<%end%>

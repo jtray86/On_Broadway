@@ -27,13 +27,24 @@ class ActorsController < ApplicationController
   def edit
   end
 
+  def update
+    actor = Actor.find(params[:id])
+    actor.update(actor_params(:actor_id, :character_id))
+    if actor.valid?
+      redirect_to actor_path(actor)
+    else
+      flash[:message] = actor.errors.full_messages 
+      redirect_to new_actor_path
+    
+  end
+
   private
 
   def set_actor
     @actor = Actor.find(params[:id])
   end
 
-  def actor_params
+  def actor_params(*args)
     params.require(:actor).permit(:name, :bio, :website, :image)
   end
 

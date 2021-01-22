@@ -1,2 +1,26 @@
 <h1>Shows#edit</h1>
-<p>Find me in app/views/shows/edit.html.erb</p>
+<%= form_for @show do |f|%>
+
+<%=f.label :name%>
+<%=f.text_field :name%>
+<br>
+<%=f.label :description%>
+<%=f.text_field :description%>
+<br>
+<%=f.label :theater%>
+<%=f.text_field :theater%>
+<br>
+<%=f.label :website%>
+<%=f.text_field :website%>
+<br>
+<%=f.label :image%>
+<%=f.text_field :image%>
+<br>
+<%=f.submit "Edit Profile"%>
+<%end%>
+
+
+<%if flash[:message]%>
+<%flash[:message].each do |message|%>
+<p><%=message%></p>
+<%end%>

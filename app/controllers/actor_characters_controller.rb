@@ -23,6 +23,12 @@ class ActorCharactersController < ApplicationController
   def edit
   end
 
+  def update
+    actor_character = ActorCharacter.find(params[:id])
+    actor_character.update(actor_character_params(:actor_id, :character_id))
+    redirect_to show_path(actor_character.character.show)
+  end
+
   private
 
   def set_actor_character

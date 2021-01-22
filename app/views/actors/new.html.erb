@@ -1,2 +1,22 @@
-<h1>Actors#new</h1>
-<p>Find me in app/views/actors/new.html.erb</p>
+<h1>New Actors</h1>
+<%= form_for @actor do |f|%>
+
+<%=f.label :name%>
+<%=f.text_field :name%>
+<br>
+<%=f.label :bio%>
+<%=f.text_field :bio%>
+<br>
+<%=f.label :website%>
+<%=f.text_field :website%>
+<br>
+<%=f.label :image%>
+<%=f.text_field :image%>
+<br>
+<%=f.submit "Create Profile"%>
+<%end%>
+
+<%if flash[:message]%>
+<%flash[:message].each do |message|%>
+<p><%=message%></p>
+<%end%>
