@@ -34,5 +34,12 @@ end
     Show.create(name: name, description: description, theater: theater, website: website, image: image, admin_id: admin)
 end
 
+5.times do 
+    name = Faker::Name.unique.name 
+    bio = Faker::Lorem.paragraphs(number: 1) 
+    website = Faker::Internet.domain_name 
+    image = Faker::LoremFlickr.image(size: "50x60")
+    Creative.create(name: name, bio: bio, website: website, image: image)
+end
 
 puts "🔥 🔥 🔥 🔥 SEEDED 🔥 🔥 🔥 🔥 "

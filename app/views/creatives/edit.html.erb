@@ -1,12 +1,17 @@
-<h1>Edit Admin Profile</h1>
-
-    <%= form_for @admin do |f|%>
+<h1>Edit Profile</h1>
+    <%= form_for @creative do |f|%>
 
         <%=f.label :name%>
         <%=f.text_field :name%>
         <br>
-        <%=f.label :password%>
-        <%=f.password_field :password%>
+        <%=f.label :bio%>
+        <%=f.text_field :bio%>
+        <br>
+        <%=f.label :website%>
+        <%=f.text_field :website%>
+        <br>
+        <%=f.label :image%>
+        <%=f.text_field :image%>
         <br>
         <%=f.submit "Edit Profile"%>
     <%end%>

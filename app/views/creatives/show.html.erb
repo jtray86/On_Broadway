@@ -1,0 +1,17 @@
+<h1><%=@creative.name%></h1>
+
+<div> 
+    <img src=<%=@creative.image%> alt=<%=@creative.name%> />
+</div>
+
+<p><%= @creative.bio %> </p>
+
+<p> <%=@creative.website %> </p>
+
+<ul>
+        <% @creative.shows.each do |show| %>
+            <li>
+                Show -- <%= link_to show.name, show_path(show)%>
+            </li>
+        <%end%>
+    </ul>

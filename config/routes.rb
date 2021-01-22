@@ -1,5 +1,11 @@
 Rails.application.routes.draw do
   
+  get 'creative_shows/new'
+  get 'creative_shows/edit'
+  get 'creatives/index'
+  get 'creatives/show'
+  get 'creatives/new'
+  get 'creatives/edit'
   ###########ACTORS#############
 
   get '/actors/', to: 'actors#index', as: 'actors' 
@@ -70,4 +76,27 @@ Rails.application.routes.draw do
 
   delete '/actorCharacters/:id', to: 'actor_characters#destroy'
 
+  ############CREATIVES#######################
+
+  get '/creatives/', to: 'creatives#index', as: 'creatives' 
+
+  get '/creatives/new', to: 'creatives#new', as: 'new_creative'
+  post '/creatives/', to: 'creatives#create'
+  
+  get '/creatives/:id', to: 'creatives#show', as: 'creative'
+
+  get '/creatives/:id/edit', to: 'creatives#edit', as: 'edit_creative'
+  patch '/creatives/:id', to: 'creatives#update'
+
+  delete '/creatives/:id', to: 'creatives#destroy'
+
+  ################CREATIVESHOWS##################
+
+  get '/creative_shows/new', to: 'creative_shows#new', as: 'new_creative_show'
+  post '/creative_shows/', to: 'creative_shows#create'
+
+  get '/creative_shows/:id/edit', to: 'creative_shows#edit', as: 'edit_creative_show'
+  patch '/creative_shows/:id', to: 'creative_shows#update'
+
+  delete '/creative_shows/:id', to: 'creative_shows#destroy'
 end
