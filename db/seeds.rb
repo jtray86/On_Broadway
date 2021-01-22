@@ -20,7 +20,8 @@ end
 10.times do 
     name = Faker::Name.unique.name
     description = Faker::Lorem.paragraphs(number: 1)
-    Character.create(name: name, description: description)
+    show = rand(5)
+    Character.create(name: name, description: description, show_id: show)
 end
 
 5.times do 
@@ -30,8 +31,8 @@ end
     website = Faker::Internet.domain_name 
     image = Faker::LoremFlickr.image(size: "50x60")
     admin = rand(5)
-    Show.create(name: name, description: description, website: website, image: image, admin_id: admin)
+    Show.create(name: name, description: description, theater: theater, website: website, image: image, admin_id: admin)
 end
 
 
-puts "seeded"
+puts "🔥 🔥 🔥 🔥 SEEDED 🔥 🔥 🔥 🔥 "

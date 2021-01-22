@@ -1,0 +1,12 @@
+<h1><%= @admin.name %> </h1>
+
+
+<ul>
+        <% @admin.shows.each do |show| %>
+            <li>
+                <%= link_to show.name, show_path(show) %>
+            </li>
+        <%end%>
+    </ul>
+
+

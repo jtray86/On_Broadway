@@ -1,0 +1,18 @@
+<h1><%=@actor.name%></h1>
+
+<div> 
+    <img src=<%=@actor.image%> alt=<%=@actor.name%> />
+</div>
+
+<p><%= @actor.bio %> </p>
+
+<p> <%=@actor.website %> </p>
+
+<ul>
+        <% @actor.characters.each do |character| %>
+            <li>
+                Show -- <%= link_to character.show.name, show_path(character.show_id)%> <br>
+                Character -- <%= link_to character.name, character_path(character) %>
+            </li>
+        <%end%>
+    </ul>

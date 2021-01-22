@@ -1,0 +1,10 @@
+<h1>Actors</h1>
+
+<ul>
+    <% @actors.each do |actor| %>   
+        <li>
+            <%= link_to actor.name, actor_path(actor) %> 
+            <img src=<%=actor.image%> alt=<%=actor.name%> />    
+        </li>
+    <%end%>
+</ul>

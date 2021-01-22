@@ -1,0 +1,10 @@
+<h1>On Broadway</h1>
+
+<ul>
+    <% @shows.each do |show| %>   
+        <li>
+            <%= link_to show.name, show_path(show) %> 
+            <img src=<%=show.image%> alt=<%=show.name%> />    
+        </li>
+    <%end%>
+</ul>
