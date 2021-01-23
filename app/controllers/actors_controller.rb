@@ -3,8 +3,15 @@ class ActorsController < ApplicationController
   
   
   def index
-    actors = Actor.all  
-    @actors = actors.order(name: :asc)
+    # actors = Actor.all  
+    # @actors = actors.order(name: :asc)
+      if params[:search] 
+        search = params[:search].downcase
+        @actor = Actor.all.select{|actor| actor.name.downcase == search}
+        redirect_to actor_path(@actor)
+      else
+        redirect_to actors_path
+      end
   end
 
   def show
@@ -45,7 +52,7 @@ class ActorsController < ApplicationController
   end
 
   def actor_params(*args)
-    params.require(:actor).permit(:name, :bio, :website, :image)
+    params.require(:actor).permit(:name, :bio, :website, :image, :search)
   end
 
 end

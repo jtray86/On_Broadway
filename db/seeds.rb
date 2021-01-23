@@ -42,4 +42,15 @@ end
     Creative.create(name: name, bio: bio, website: website, image: image)
 end
 
+5.times do 
+    show = rand(1..5)
+    creative = rand(1..5)
+    CreativeShow.create(show_id: show, creative_id: creative) 
+end
+
+# 5.times do 
+#     character = rand(1..5)
+#     actor = rand(1..5)
+#     ActorCharacter.create(actor_id: actor, character_id: character) 
+# end
 puts "🔥 🔥 🔥 🔥 SEEDED 🔥 🔥 🔥 🔥 "

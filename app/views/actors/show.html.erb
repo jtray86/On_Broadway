@@ -6,7 +6,7 @@
 
 <p><%= @actor.bio %> </p>
 
-<p> <%=@actor.website %> </p>
+<p> <a href = "<%=@actor.website%>"><%=@actor.website%> </a></p>
 
 <ul>
         <% @actor.characters.each do |character| %>
