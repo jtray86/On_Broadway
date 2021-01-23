@@ -3,14 +3,18 @@ class ActorsController < ApplicationController
   
   
   def index
-    # actors = Actor.all  
-    # @actors = actors.order(name: :asc)
-      if params[:search] 
+    actors = Actor.all  
+    @actors = actors.order(name: :asc)
+    
+      if params[:search]
         search = params[:search].downcase
-        @actor = Actor.all.select{|actor| actor.name.downcase == search}
-        redirect_to actor_path(@actor)
-      else
-        redirect_to actors_path
+          if 
+            Actor.all.each{|actor| actor.name.downcase != search}
+            redirect_to actors_path
+          else 
+            @actor = Actor.all.select{|actor| actor.name.downcase == search}
+            redirect_to actor_path(@actor)
+          end
       end
   end
 
