@@ -8,9 +8,11 @@ class ActorCharactersController < ApplicationController
 
   def new
     @actor_character = ActorCharacter.new
+    
   end
 
   def create
+    
     @actor_character = ActorCharacter.create(actor_character_params(:actor_id, :character_id))
         if @actor_character.valid?
           redirect_to show_path(@actor_character.character.show)
