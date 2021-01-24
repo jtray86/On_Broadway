@@ -100,3 +100,18 @@ Rails.application.routes.draw do
 
   delete '/creative_shows/:id', to: 'creative_shows#destroy'
 end
+
+
+
+
+# <%=form_for @actor_character do |f|%>
+#   <%=f.label :actor_id, "#{Actor.find(params[:format]).name}" %> 
+#   <%=f.hidden_field :actor_id, :value => params[:format] %>
+#   <%=f.label :character_id %> 
+#   <%=f.collection_select :character_id, Character.all, :id, :name %> 
+#   <%=f.submit "Cast Actor" %> 
+# <%end%> 
+
+# id: Actor.all.find_by(name: "#{params[:actor_character][:actor_id]}").id
+
+# <%=f.collection_select :actor_id, Actor.all, :id, :name, {include_blank: "Choose an Actor"} %>

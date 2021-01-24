@@ -7,19 +7,37 @@ class ActorCharactersController < ApplicationController
   end
 
   def new
+    #byebug
     @actor_character = ActorCharacter.new
     
   end
 
   def create
     
-    @actor_character = ActorCharacter.create(actor_character_params(:actor_id, :character_id))
-        if @actor_character.valid?
-          redirect_to show_path(@actor_character.character.show)
-        else
-          flash[:message] = @actor_character.errors.full_messages
-          redirect_to new_actor_character_path
-        end
+    if params[:actor_character][:actor_id] && params[:actor_character][:character_id]
+        actor = params[:actor_character][:actor_id]
+        character = params[:actor_character][:character_id]
+          if Actor.find_by(name: "#{actor}") == nil ||  Character.find_by(name: "#{character}") == nil
+            flash[:message] = "Invalid actor/character"
+            redirect_to new_actor_character_path
+          else 
+            actor_id = Actor.find_by(name: "#{actor}").id 
+            character_id = Character.find_by(name: "#{character}").id
+    
+            @actor_character = ActorCharacter.create(actor_id: actor_id, character_id: character_id)
+                if @actor_character.valid?
+                  redirect_to show_path(@actor_character.character.show)
+                else
+                  flash[:message] = @actor_character.errors.full_messages
+                  redirect_to new_actor_character_path
+                end
+          
+          end
+
+    else
+      redirect_to new_actor_character_path
+    end
+
   end
 
   def edit
