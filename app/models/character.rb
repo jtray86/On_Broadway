@@ -5,7 +5,7 @@ class Character < ApplicationRecord
   belongs_to :show
 
     validates :name, presence: true  
-    validates :bio, presence: true, length: {minimum: 100} 
+    validates :description, presence: true, length: {minimum: 100} 
 
   def actor_name
       self.actors.last 
