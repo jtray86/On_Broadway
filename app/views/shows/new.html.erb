@@ -16,6 +16,8 @@
         <%=f.label :image%>
         <%=f.text_field :image%>
         <br>
+        <%=f.hidden_field :admin_id, :value => params[:format] %>
+        <br>
         <%=f.submit "New Show"%>
     <%end%>
 

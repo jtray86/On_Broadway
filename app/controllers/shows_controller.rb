@@ -25,6 +25,7 @@ class ShowsController < ApplicationController
 
   def new
     @show = Show.new
+
   end
 
   def create
@@ -33,7 +34,7 @@ class ShowsController < ApplicationController
           redirect_to show_path(@show)
         else
           flash[:message] = @show.errors.full_messages
-          redirect_to new_show_path
+          redirect_to admin_path(@show[:admin_id])
         end
   end
 
@@ -57,7 +58,7 @@ class ShowsController < ApplicationController
     @show = Show.find(params[:id])
   end
 
-  def show_params
+  def show_params(*args)
     params.require(:show).permit(:name, :description, :theater, :image, :website, :admin_id)
   end
 

@@ -58,8 +58,8 @@ class CreativesController < ApplicationController
     @creative = Creative.find(params[:id])
   end
 
-  def actor_params(*args)
-    params.require(:actor).permit(:name, :bio, :website, :image)
+  def creative_params(*args)
+    params.require(:creative).permit(:name, :bio, :website, :image)
   end
 
 end
