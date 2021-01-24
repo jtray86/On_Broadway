@@ -4,7 +4,20 @@ class ShowsController < ApplicationController
   
   def index
     @shows = Show.all 
+
+    if params[:search]
+      search = params[:search].split.map(&:capitalize).join(' ')
+        if 
+          Show.all.find_by(name: search) == nil
+          flash[:message] = "No Show Found by that Name"
+          redirect_to shows_path
+        else 
+          @show = Show.all.find_by(name: search)
+          redirect_to show_path(@show)
+        end
+    end
   end
+
 
   def show
     #byebug

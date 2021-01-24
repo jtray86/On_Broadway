@@ -1,9 +1,10 @@
 <h1> Add a Creative to the Team </h1>
 
+
 <%=form_for @creative_show do |f|%>
-        <%=f.label :creative_id %> 
-        <%=f.collection_select :creative_id, Creative.all, :id, :name %> 
-        <%=f.label :show_id %> 
-        <%=f.collection_select :show_id, Show.all, :id, :name %> 
-        <%=f.submit "Add them to the Creative Team" %> 
-    <%end%> 
+  <%=f.label :creative_id, "#{Creative.find(params[:format]).name}" %> 
+  <%=f.hidden_field :creative_id, :value => params[:format] %>
+  <%=f.label :show_id %> 
+  <%=f.collection_select :show_id, Show.all, :id, :name %> 
+  <%=f.submit "Add Creative to Team" %> 
+<%end%> 

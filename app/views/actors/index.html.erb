@@ -1,9 +1,16 @@
 <h1>Actors</h1>
 
 <%=form_tag('/actors', method: :get) do %>
+    <p> Case Sensitive </p>
     <%=text_field_tag :search, params[:search]%>
     <%=submit_tag "Search 🔍"%>
 <%end%>
+
+    <%if flash[:message]%>
+            <p><%=flash[:message]%></p>
+    <%end%>
+
+
 <ul>
     <% @actors.each do |actor| %>   
         <li>
@@ -12,3 +19,4 @@
         </li>
     <%end%>
 </ul>
+

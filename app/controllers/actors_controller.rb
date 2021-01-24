@@ -7,12 +7,13 @@ class ActorsController < ApplicationController
     @actors = actors.order(name: :asc)
     
       if params[:search]
-        search = params[:search].downcase
+        search = params[:search].split.map(&:capitalize).join(' ')
           if 
-            Actor.all.each{|actor| actor.name.downcase != search}
+            Actor.all.find_by(name: search) == nil
+            flash[:message] = "No Actor Found by that Name"
             redirect_to actors_path
           else 
-            @actor = Actor.all.select{|actor| actor.name.downcase == search}
+            @actor = Actor.all.find_by(name: search)
             redirect_to actor_path(@actor)
           end
       end

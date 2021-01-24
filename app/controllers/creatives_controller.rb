@@ -5,7 +5,21 @@ class CreativesController < ApplicationController
   def index
     creatives = Creative.all  
     @creatives = creatives.order(name: :asc)
+
+      if params[:search]
+        search = params[:search].split.map(&:capitalize).join(' ')
+          if 
+            Creative.all.find_by(name: search) == nil
+            flash[:message] = "No Creative Found by that Name"
+            redirect_to creatives_path
+          else 
+            @creative = Creative.all.find_by(name: search)
+            redirect_to creative_path(@creative)
+          end
+      end
   end
+
+  
 
   def show
   end

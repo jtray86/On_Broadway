@@ -13,7 +13,7 @@ class CreativeShowsController < ApplicationController
   def create
     @creative_show = CreativeShow.create(creative_show_params(:creative_id, :show_id))
         if @creative_show.valid?
-          redirect_to creative_show_path(@creative_show)
+          redirect_to creative_path(@creative_show.creative_id)
         else
           flash[:message] = @creative_show.errors.full_messages
           redirect_to new_creative_show_path
