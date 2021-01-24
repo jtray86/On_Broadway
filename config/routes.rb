@@ -36,10 +36,14 @@ Rails.application.routes.draw do
 
   #############ADMINS#################
 
+  get '/admins/login', to: 'admins#login', as: "login"
+  post '/please_login', to: 'admins#please_login'
   get '/admins/', to: 'admins#index', as: 'admins' 
 
   get '/admins/new', to: 'admins#new', as: 'new_admin'
   post '/admins/', to: 'admins#create'
+
+  
   
   get '/admins/:id', to: 'admins#show', as: 'admin'
 

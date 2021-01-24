@@ -9,6 +9,20 @@ class AdminsController < ApplicationController
   def show
   end
 
+  def login
+
+  end
+
+  def please_login
+    @admin = Admin.find_by(username: params[:username])
+      if @admin && @admin.authenticate(params[:password])
+        redirect_to admin_path(@admin)
+      else
+        flash[:message] = "Invalid username/password"
+        redirect_to login_path
+      end
+  end
+
   def new
     @admin = Admin.new
   end
@@ -44,7 +58,7 @@ class AdminsController < ApplicationController
   end
 
   def admin_params
-    params.require(:admin).permit(:username, :name, :password)
+    params.require(:admin).permit(:username, :name, :password, :password_confirmation)
   end
 
 end
