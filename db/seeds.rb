@@ -50,7 +50,7 @@ end
 5.times do 
     character = rand(1..5)
     actor = rand(1..5)
-    ActorCharacter.create(actor_id: actor, character_id: character) 
+    ActorCharacter.create(actor_id: actor, character_id: character, current: false) 
 end
 
 puts "🔥 🔥 🔥 🔥 SEEDED 🔥 🔥 🔥 🔥 "

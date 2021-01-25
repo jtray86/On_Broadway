@@ -9,3 +9,5 @@
             </li>
         <%end%>
     </ul>
+
+<%= button_to "Add To Cast", new_actor_character_path(character_id = @character.id), method: "get" %>

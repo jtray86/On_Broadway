@@ -33,7 +33,7 @@ class CharactersController < ApplicationController
       redirect_to character_path(character)
     else
       flash[:message] = character.errors.full_messages 
-      redirect_to new_character_path
+      redirect_to edit_character_path
     end
   end
 

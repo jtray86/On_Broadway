@@ -17,14 +17,16 @@ class ActorCharactersController < ApplicationController
     if params[:actor_character][:actor_id] && params[:actor_character][:character_id]
         actor = params[:actor_character][:actor_id]
         character = params[:actor_character][:character_id]
-          if Actor.find_by(name: "#{actor}") == nil ||  Character.find_by(name: "#{character}") == nil
+        current = params[:actor_character][:current]
+          if Actor.find_by(name: "#{actor}") == nil 
+            #||  Character.find_by(name: "#{character}") == nil
             flash[:message] = "Invalid actor/character"
-            redirect_to new_actor_character_path
+            redirect_to new_actor_character_path(character)
           else 
             actor_id = Actor.find_by(name: "#{actor}").id 
-            character_id = Character.find_by(name: "#{character}").id
+            #character_id = Character.find_by(name: "#{character}").id
     
-            @actor_character = ActorCharacter.create(actor_id: actor_id, character_id: character_id)
+            @actor_character = ActorCharacter.create(actor_id: actor_id, character_id: character, current: current)
                 if @actor_character.valid?
                   redirect_to show_path(@actor_character.character.show)
                 else
@@ -40,14 +42,14 @@ class ActorCharactersController < ApplicationController
 
   end
 
-  def edit
-  end
+  # def edit
+  # end
 
-  def update
-    actor_character = ActorCharacter.find(params[:id])
-    actor_character.update(actor_character_params(:actor_id, :character_id))
-    redirect_to show_path(actor_character.character.show)
-  end
+  # def update
+  #   actor_character = ActorCharacter.find(params[:id])
+  #   actor_character.update(actor_character_params(:actor_id, :character_id))
+  #   redirect_to show_path(actor_character.character.show)
+  # end
 
   private
 
@@ -56,7 +58,7 @@ class ActorCharactersController < ApplicationController
   end
 
   def actor_character_params(*args)
-    params.require(:actor_character).permit(:actor_id, :character_id)
+    params.require(:actor_character).permit(:actor_id, :character_id, :current)
   end
 
 

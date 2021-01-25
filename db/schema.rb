@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_01_24_202107) do
+ActiveRecord::Schema.define(version: 2021_01_25_170340) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -20,6 +20,7 @@ ActiveRecord::Schema.define(version: 2021_01_24_202107) do
     t.bigint "actor_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.boolean "current"
     t.index ["actor_id"], name: "index_actor_characters_on_actor_id"
     t.index ["character_id"], name: "index_actor_characters_on_character_id"
   end

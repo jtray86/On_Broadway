@@ -6,8 +6,10 @@
     <%=form_for @actor_character do |f| %>
         <%=f.label :actor_id %>
         <%=f.text_field :actor_id %>
-        <%=f.label :character_id %>
-        <%=f.text_field :character_id %>
+        <%=f.label :character_id, "#{Character.find(params[:format]).name}" %> 
+        <%=f.hidden_field :character_id, :value => params[:format] %>
+        <%=f.label :current%>
+        <%=f.check_box :current, {:checked=>true}, checked_value = true, unchecked_value = false %>
         <%=f.submit "Add Actor and Character" %>
 
     <%end%>

@@ -1,5 +1,6 @@
 class ActorsController < ApplicationController
-  before_action :set_actor, only: [:show, :edit, :update]
+  before_action :set_actor, only: [:show, :edit, :update, :destroy]
+  
   
   
   def index
@@ -50,6 +51,12 @@ class ActorsController < ApplicationController
     end
   end
 
+  def destroy
+    @actor.actor_characters.destroy_all
+    @actor.destroy
+    redirect_to shows_path
+  end
+
   private
 
   def set_actor
@@ -59,6 +66,8 @@ class ActorsController < ApplicationController
   def actor_params(*args)
     params.require(:actor).permit(:name, :bio, :website, :image, :search)
   end
+
+  
 
 end
 

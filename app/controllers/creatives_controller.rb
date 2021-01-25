@@ -1,5 +1,5 @@
 class CreativesController < ApplicationController
-  before_action :set_creative, only: [:show, :edit, :update]
+  before_action :set_creative, only: [:show, :edit, :update, :destroy]
   
   
   def index
@@ -50,6 +50,12 @@ class CreativesController < ApplicationController
       flash[:message] = creative.errors.full_messages 
       redirect_to new_creative_path
     end
+  end
+
+  def destroy
+    @creative.creative_shows.destroy_all
+    @creative.destroy
+    redirect_to shows_path
   end
 
   private

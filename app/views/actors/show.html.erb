@@ -17,4 +17,5 @@
         <%end%>
     </ul>
 
-    <%= button_to "Add To Cast", new_actor_character_path(actor_id = @actor.id), method: "get" %>
+   
+    <%= button_to "Delete Profile", actor_path(@actor), method: "delete" %>

@@ -1,11 +1,5 @@
 Rails.application.routes.draw do
   
-  get 'creative_shows/new'
-  get 'creative_shows/edit'
-  get 'creatives/index'
-  get 'creatives/show'
-  get 'creatives/new'
-  get 'creatives/edit'
   ###########ACTORS#############
 
   get '/actors/', to: 'actors#index', as: 'actors' 
@@ -32,7 +26,7 @@ Rails.application.routes.draw do
   get '/characters/:id/edit', to: 'characters#edit', as: 'edit_character'
   patch '/characters/:id', to: 'characters#update'
 
-  delete '/characters/:id', to: 'characters#destroy'
+  # delete '/characters/:id', to: 'characters#destroy'
 
   #############ADMINS#################
 
@@ -50,7 +44,7 @@ Rails.application.routes.draw do
   get '/admins/:id/edit', to: 'admins#edit', as: 'edit_admin'
   patch '/admins/:id', to: 'admins#update'
 
-  delete '/admins/:id', to: 'admins#destroy'
+  # delete '/admins/:id', to: 'admins#destroy'
 
   ##############SHOWS###################
 
@@ -64,7 +58,7 @@ Rails.application.routes.draw do
   get '/shows/:id/edit', to: 'shows#edit', as: 'edit_show'
   patch '/shows/:id', to: 'shows#update'
 
-  delete '/shows/:id', to: 'shows#destroy'
+  # delete '/shows/:id', to: 'shows#destroy'
 
   #############ActorCharacters#################
 
@@ -78,7 +72,7 @@ Rails.application.routes.draw do
   get '/actorCharacters/:id/edit', to: 'actor_characters#edit', as: 'edit_actor_character'
   patch '/actorCharacters/:id', to: 'actor_characters#update'
 
-  delete '/actorCharacters/:id', to: 'actor_characters#destroy'
+  # delete '/actorCharacters/:id', to: 'actor_characters#destroy'
 
   ############CREATIVES#######################
 
@@ -102,7 +96,7 @@ Rails.application.routes.draw do
   get '/creative_shows/:id/edit', to: 'creative_shows#edit', as: 'edit_creative_show'
   patch '/creative_shows/:id', to: 'creative_shows#update'
 
-  delete '/creative_shows/:id', to: 'creative_shows#destroy'
+  # delete '/creative_shows/:id', to: 'creative_shows#destroy'
 end
 
 
@@ -119,3 +113,13 @@ end
 # id: Actor.all.find_by(name: "#{params[:actor_character][:actor_id]}").id
 
 # <%=f.collection_select :actor_id, Actor.all, :id, :name, {include_blank: "Choose an Actor"} %>
+
+
+# <% if character.actors.empty?%>
+#                        <%= "This role is not currently cast." %>
+#                        <%elsif%>
+#                             <%character.actor_character.current == true%>
+#                             Played By --- <%= link_to character.actor_name.name,  actor_path(character.actor_name.id) %>
+#                         <%else %>
+#                             Played By --- <%= link_to character.actor_name.name,  actor_path(character.actor_name.id) %>
+#                  <%end%>
