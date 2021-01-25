@@ -123,3 +123,10 @@ end
 #                         <%else %>
 #                             Played By --- <%= link_to character.actor_name.name,  actor_path(character.actor_name.id) %>
 #                  <%end%>
+
+
+# <!--       == "This character has not been cast" %>
+# <%= "This role is not currently cast." %>
+# <%else %>
+# Played By --- <%= link_to character.actor_name.name,  actor_path(character.actor_name.id) %>
+# <%end%>-->

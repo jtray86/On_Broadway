@@ -18,6 +18,7 @@ class ActorCharactersController < ApplicationController
         actor = params[:actor_character][:actor_id]
         character = params[:actor_character][:character_id]
         current = params[:actor_character][:current]
+               # byebug
           if Actor.find_by(name: "#{actor}") == nil 
             #||  Character.find_by(name: "#{character}") == nil
             flash[:message] = "Invalid actor/character"
