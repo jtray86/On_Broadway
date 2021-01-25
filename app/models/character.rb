@@ -9,26 +9,15 @@ class Character < ApplicationRecord
 
   def actor_name
     
-      # self.actors.each do |actor|
-      #   if actor.actor_characters.select do |cast|
-      #      cast.current == "true"
-      #       actor_ist = Actor.find_by(id: cast.actor_id)
-      #       actor_ist.name
-          
-      #   else 
-      #      "This role is not currently cast"
-      #   end
-      # end
-      # end
-        self.actor_characters.each do |actor|
-          if actor.current == true
-            actor_ist = Actor.find_by(id: actor.actor_id)
-            actor_ist
-          else
-            "This role is not currently cast"
-          end
+      
+        self.actor_characters.select do |actor_character|
+            if actor_character.current == false || actor_character.current == nil
+             return "This character has not been cast"
+            else 
+              Actor.find_by(id: actor_character.actor_id)
+            end
         end
-  end
+      end
 
   
 end
