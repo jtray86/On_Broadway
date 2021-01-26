@@ -16,20 +16,13 @@
                 <%= link_to character.name, character_path(character) %> 
                 <% if character.actors.empty?%>
                     <%= "This role is not currently cast." %>
-                <%else character.actor_characters.select do |actor| %>
-                    <% if actor.current == true %>
-                      Played By --- <%= link_to Actor.find_by(id: actor.actor_id).name,  actor_path(actor.actor_id) %>
+                <%else actor = character.actor_characters.select{|actor| actor if actor.current == true} %>
+                      <% if actor.empty? %>
+                      <%= "This role has is currently being cast." %>
+                    <% else %>
+                        Played By --- <%= link_to Actor.find_by(id: actor[0].actor_id).name,  actor_path(actor[0].actor_id) %>
                     <%end%>
-                    <% if actor.current.all == false %>
-                        <%= "This role is not currently cast SOMETHING EXTRA"%>
-                    <%end%>
-                <%end%>
-                <%end%>
-
-                
-                
-         
-                 
+                <%end%>  
             </li>
         <%end%>
     </ul>
