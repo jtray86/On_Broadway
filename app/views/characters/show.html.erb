@@ -5,28 +5,34 @@
 <p> <%=@character.description%>
     <h3> Currently Played By</h3>
     <ul>
-        <% actor = @character.actor_characters.where(current: true)%>
+        <% if @character.actor_characters.empty? %>
+            <%= "This role has not been cast" %>
+        <% else %>
+            <% actor = @character.actor_characters.where(current: true)%>
         
-             <li>
+                <li>
                 
                     <%=link_to Actor.find_by(id: actor[0][:actor_id]).name, actor_path(actor[0][:actor_id]) %>
 
-               
-            </li>
+                </li>
+        <%end%>
         
     </ul>
 
     <h3> Formally Played By</h3>
     <ul>
-        <% actor = @character.actor_characters.where(current: false)%>
-        <%actor.each do |actor|%>
+        <% if @character.actor_characters.empty? %>
+            <%= "This show is currently casting its original cast!" %>
+        <%else%>
+            <% actor = @character.actor_characters.where(current: false)%>
+            <%actor.each do |actor|%>
         
-             <li>
-                
+                <li>
+                    
                     <%=link_to Actor.find_by(id: actor.actor_id).name, actor_path(actor.actor_id) %>
 
-               
-            </li>
+                </li>
+            <%end%>
         <%end%>
     </ul>
 
