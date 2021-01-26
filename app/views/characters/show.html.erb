@@ -1,13 +1,34 @@
 <h1><%=@character.name%>'s Profile Page</h1>
+<h4><%=link_to @character.show.name, show_path(@character.show.id)%></h4>
 
-<p> <%= @character.description %>
 
+<p> <%=@character.description%>
+    <h3> Currently Played By</h3>
     <ul>
-        <% @character.actors.each do |actor| %>
-            <li>
-                <%= link_to actor.name, actor_path(actor) %>
+        <% actor = @character.actor_characters.where(current: true)%>
+        
+             <li>
+                
+                    <%=link_to Actor.find_by(id: actor[0][:actor_id]).name, actor_path(actor[0][:actor_id]) %>
+
+               
+            </li>
+        
+    </ul>
+
+    <h3> Formally Played By</h3>
+    <ul>
+        <% actor = @character.actor_characters.where(current: false)%>
+        <%actor.each do |actor|%>
+        
+             <li>
+                
+                    <%=link_to Actor.find_by(id: actor.actor_id).name, actor_path(actor.actor_id) %>
+
+               
             </li>
         <%end%>
     </ul>
+
 
 <%= button_to "Cast This Role", new_actor_character_path(character_id = @character.id), method: "get" %>

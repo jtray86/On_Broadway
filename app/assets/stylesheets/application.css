@@ -1,15 +1,62 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+div.header {
+    background-color: black;
+    margin: 0;
+   padding: 0;
+}
+
+div.header #login{
+    display: inline;
+    float: right;
+    padding: 25px;
+    border:rgb(245, 210, 68) 1px solid;
+}
+
+div.header #login form.button_to{
+        background-color: rgb(245, 210, 68); 
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        cursor: pointer;
+        font-size: 16px;
+     
+}
+
+div.header #login .user{
+    color: rgb(245, 210, 68);
+    float: center;
+}
+
+div.nav {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(137,25,189);
+}
+
+ul.navlist{
+
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+li.navitems{
+    font-size: x-large;
+    display: inline;
+    padding: 30px;
+}   
+
+li.navitems a:link {
+    color:  rgb(245, 210, 68);
+}
+
+li.navitems a:visited {
+    color: rgb(245, 210, 68);
+    outline: none;
+}
+
+li.navitems a:hover {
+    font-size: 150%;
+}

@@ -134,3 +134,18 @@ end
 # <%else %>
 # Played By --- <%= link_to character.actor_name.name,  actor_path(character.actor_name.id) %>
 # <%end%>-->
+
+
+
+# <ul>
+# <%@character.actor_characters.each do |actor_character|%>
+
+#      <li>
+#         <%if actor_character.current == false%>
+#             <%=link_to Actor.find_by(id: actor_character.actor_id).name, actor_path(actor_character.actor_id) %>
+#         <%else%>
+#            <%nil%>
+#         <%end%>
+#     </li>
+# <%end%>
+# </ul>
