@@ -1,6 +1,6 @@
 class ActorsController < ApplicationController
   before_action :set_actor, only: [:show, :edit, :update, :destroy]
-  
+  skip_before_action :authorized, only: [:index, :show]
   
   
   def index

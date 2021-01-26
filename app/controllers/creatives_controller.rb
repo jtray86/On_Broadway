@@ -1,6 +1,6 @@
 class CreativesController < ApplicationController
   before_action :set_creative, only: [:show, :edit, :update, :destroy]
-  
+  skip_before_action :authorized, only: [:index, :show]
   
   def index
     creatives = Creative.all  

@@ -1,6 +1,6 @@
 class ActorCharactersController < ApplicationController
   before_action :set_actor_character, only: [:edit, :update]
-  
+ 
   
   def index
     @actor_characters = ActorCharacter.all 

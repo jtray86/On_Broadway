@@ -1,6 +1,6 @@
 class ShowsController < ApplicationController
   before_action :set_show, only: [:show, :edit, :update]
-  
+  skip_before_action :authorized, only: [:index, :show]
   
   def index
     @shows = Show.all 

@@ -1,6 +1,6 @@
 class CreativeShowsController < ApplicationController
   before_action :set_creative_show, only: [:edit, :update]
-  
+ 
   
   def index
     @creative_shows = CreativeShow.all 

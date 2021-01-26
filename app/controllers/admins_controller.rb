@@ -1,12 +1,13 @@
 class AdminsController < ApplicationController
-  before_action :set_admin, only: [:show, :edit, :update]
-  
+  before_action :set_admin, only: [:edit, :update]
+  skip_before_action :authorized, only: [:new, :create, :login, :please_login]
   
   def index
     @admins = Admin.all 
   end
 
   def show
+    @admin = set_current_user
   end
 
   def login
@@ -15,12 +16,19 @@ class AdminsController < ApplicationController
 
   def please_login
     @admin = Admin.find_by(username: params[:username])
+
       if @admin && @admin.authenticate(params[:password])
+        session[:admin_id] = @admin.id
         redirect_to admin_path(@admin)
       else
         flash[:message] = "Invalid username/password"
         redirect_to login_path
       end
+  end
+
+  def logout
+    session[:admin_id] = nil
+    redirect_to login_path
   end
 
   def new
@@ -30,6 +38,7 @@ class AdminsController < ApplicationController
   def create
     @admin = Admin.create(admin_params)
         if @admin.valid?
+          session[:admin_id] = @admin.id
           redirect_to admin_path(@admin)
         else
           flash[:message] = @admin.errors.full_messages

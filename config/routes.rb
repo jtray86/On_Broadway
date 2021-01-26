@@ -44,6 +44,10 @@ Rails.application.routes.draw do
   get '/admins/:id/edit', to: 'admins#edit', as: 'edit_admin'
   patch '/admins/:id', to: 'admins#update'
 
+
+  ######logout########
+  delete "/logout", to:"admins#logout", as:"logout"
+
   # delete '/admins/:id', to: 'admins#destroy'
 
   ##############SHOWS###################
