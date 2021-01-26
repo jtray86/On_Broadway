@@ -8,7 +8,7 @@
 
 <p> NOW PLAYING AT - <%=@show.theater%> </p>
 
-<h3> CAST AND CREATIVE </h3>
+<h3> Cast </h3>
 
     <ul>
         <%@show.characters.each do |character|%>
@@ -25,6 +25,19 @@
                 <%end%>  
             </li>
         <%end%>
+    </ul>
+ <h3>Creative</h3>
+    <ul>
+        <%@show.creatives.each do |creative| %>
+        <li>
+         <%=link_to creative.name, creative_path(creative) %>
+         Specialty --- <%= creative.specialty%>
+        </li>
+        <%end%>
+    
+    
+    
+    
     </ul>
 
 <p> For Showtimes and Ticketing Please Visit Us At: <a href = "<%=@show.website%>"><%=@show.website%> </a></p>

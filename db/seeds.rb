@@ -38,7 +38,8 @@ end
     bio = Faker::Lorem.paragraphs(number: 10) 
     website = Faker::Internet.domain_name 
     image = Faker::LoremFlickr.image(size: "50x60")
-    Creative.create(name: name, bio: bio, website: website, image: image)
+    specialty = ["Costumes", "Sets", "Lights", "Sound", "Pyro"].sample
+    Creative.create(name: name, bio: bio, website: website, image: image, specialty: specialty)
 end
 
 5.times do 
