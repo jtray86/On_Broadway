@@ -29,6 +29,7 @@ class ActorCharactersController < ApplicationController
     
             @actor_character = ActorCharacter.create(actor_id: actor_id, character_id: character, current: current)
                 if @actor_character.valid?
+                  currently_played_by
                   redirect_to show_path(@actor_character.character.show)
                 else
                   flash[:message] = @actor_character.errors.full_messages
@@ -43,6 +44,7 @@ class ActorCharactersController < ApplicationController
 
   end
 
+  
   # def edit
   # end
 
@@ -51,6 +53,13 @@ class ActorCharactersController < ApplicationController
   #   actor_character.update(actor_character_params(:actor_id, :character_id))
   #   redirect_to show_path(actor_character.character.show)
   # end
+  def currently_played_by
+    character_current = @actor_character.character_id
+    actor_current = @actor_character.actor_id
+    all_actors = ActorCharacter.where(character_id: character_current)
+    false_actors = all_actors.select{|actor| actor.actor_id != actor_current}
+    false_actors.each{|actors| actors.update(current: false)}
+  end
 
   private
 
@@ -61,6 +70,8 @@ class ActorCharactersController < ApplicationController
   def actor_character_params(*args)
     params.require(:actor_character).permit(:actor_id, :character_id, :current)
   end
+
+  
 
 
 end
