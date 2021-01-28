@@ -1,21 +1,27 @@
-<h1><%=@actor.name%></h1>
+<div id="actorindex">
+    <h1><%=@actor.name%></h1>
+    <div class="row">
+        <div class= "pic column"> 
+            <img src=<%=@actor.image%> alt=<%=@actor.name%> />
+        </div>
 
-<div> 
-    <img src=<%=@actor.image%> alt=<%=@actor.name%> />
-</div>
+        <div class="column ptag">
+            <p><%= @actor.bio %> </p>
+        </div> 
+    </div>
+    <p class="element"> <a href = "<%=@actor.website%>"><%=@actor.website%> </a></p>
 
-<p><%= @actor.bio %> </p>
-
-<p> <a href = "<%=@actor.website%>"><%=@actor.website%> </a></p>
-
-<ul>
+    <ul class="element">
         <% @actor.characters.each do |character| %>
             <li>
-                Show -- <%= link_to character.show.name, show_path(character.show_id)%> <br>
-                Character -- <%= link_to character.name, character_path(character) %>
+                <strong>Show</strong> -- <%= link_to character.show.name, show_path(character.show_id)%> <br>
+                <strong>Character</strong> -- <%= link_to character.name, character_path(character) %>
             </li>
         <%end%>
     </ul>
 
+
    
-    <%= button_to "Delete Profile", actor_path(@actor), method: "delete" %>
+        <%= button_to "Delete Profile", actor_path(@actor), method: "delete" %>
+
+    </div>

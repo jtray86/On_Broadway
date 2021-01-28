@@ -1,5 +1,5 @@
 <div id="show_index">
-    <h1 class="show_header">On Broadway</h1>
+    <h1 class="show_header">Currently Running On Broadway</h1>
 
     <%=form_tag('/shows', method: :get) do %>
         <%=text_field_tag :search, params[:search]%>
@@ -15,7 +15,7 @@
             <li class="poster">
                 <img class="show_poster" src=<%=show.image%> alt=<%=show.name%> /> 
                 <br>
-            <p class="show_name"> <%= link_to show.name, show_path(show) %> </p>
+                <p class="show_name"> <%= link_to show.name, show_path(show) %> </p>
                 
             </li>
         <%end%>

@@ -1,48 +1,51 @@
-<h1><%= @show.name %>'s Home Page </h1>
+<div id= "show">
+        <h1 class="elements " ><%= @show.name %>'s Home Page </h1>
+    <div class="row">
+        <div class= "pageimg column"> 
+            <img src=<%=@show.image%> alt=<%=@show.name%> />
+        </div>
 
-<div> 
-    <img src=<%=@show.image%> alt=<%=@show.name%> />
-</div>
+        <div class="column ptag">
+            <p class="elements descript" ><%=@show.description%></p>
+        </div>
+    </div> 
+    <p class="elements"> <strong>Now Playing At</strong> - <%=@show.theater%> </p>
 
-<p><%=@show.description%></p>
+    <h3 class="elements"> Cast </h3>
 
-<p> NOW PLAYING AT - <%=@show.theater%> </p>
-
-<h3> Cast </h3>
-
-    <ul>
-        <%@show.characters.each do |character|%>
+        <ul>
+            <%@show.characters.each do |character|%>
+                <li>
+                    <%= link_to character.name, character_path(character) %> 
+                    <% if character.actors.empty?%>
+                        <%= "This role is not currently cast." %>
+                    <%else actor = character.actor_characters.select{|actor| actor if actor.current == true} %>
+                        <% if actor.empty? %>
+                        <%= "This role is currently being cast." %>
+                        <% else %>
+                         Played By --- <%= link_to Actor.find_by(id: actor[0].actor_id).name,  actor_path(actor[0].actor_id) %>
+                        <%end%>
+                    <%end%>  
+                </li>
+            <%end%>
+        </ul>
+    <h3 class="elements">Creative</h3>
+        <ul>
+            <%@show.creatives.each do |creative| %>
             <li>
-                <%= link_to character.name, character_path(character) %> 
-                <% if character.actors.empty?%>
-                    <%= "This role is not currently cast." %>
-                <%else actor = character.actor_characters.select{|actor| actor if actor.current == true} %>
-                      <% if actor.empty? %>
-                      <%= "This role is currently being cast." %>
-                    <% else %>
-                        Played By --- <%= link_to Actor.find_by(id: actor[0].actor_id).name,  actor_path(actor[0].actor_id) %>
-                    <%end%>
-                <%end%>  
+            <%=link_to creative.name, creative_path(creative) %>
+            Specialty --- <%= creative.specialty%>
             </li>
-        <%end%>
-    </ul>
- <h3>Creative</h3>
-    <ul>
-        <%@show.creatives.each do |creative| %>
-        <li>
-         <%=link_to creative.name, creative_path(creative) %>
-         Specialty --- <%= creative.specialty%>
-        </li>
-        <%end%>
+            <%end%>
     
     
     
     
     </ul>
 
-<p> For Showtimes and Ticketing Please Visit Us At: <a href = "<%=@show.website%>"><%=@show.website%> </a></p>
+<p class="elements"> For Showtimes and Ticketing Please Visit Us At: <a href = "<%=@show.website%>"><%=@show.website%> </a></p>
 
 
-
+</div>
 
 
