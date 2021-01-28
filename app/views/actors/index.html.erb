@@ -15,7 +15,7 @@
     <p id="features"><strong>Featured Actors</strong></p>
 <ul>
 
-    <% @actors.sample(8).each do |actor| %>   
+    <% @actors.sample(12).each do |actor| %>   
         <li>
             <%= link_to actor.name, actor_path(actor) %> 
             <img src=<%=actor.image%> alt=<%=actor.name%> />    

@@ -144,7 +144,7 @@ ActorCharacter.create(actor_id: 3, character_id: 3, current: true)
 
 Character.create(name: "Eliza Hamilton", description: "Fiercely loyal, self-possessed, proud. Evolves from lovesick, wealthy young woman to the sole keeper of her late husband’s legacy. ", show_id: 3)
 
-Actor.create(name: "Krystal Joy Brown", bio: "Broadway: Motown The Musical (Diana Ross), Big Fish (Josephine Bloom), Leap of Faith (Ornella), Hair (Dionne/Abe Lincoln). National Tour: RENT (Mimi). Off-Broadway: Man in the Ring (Sadie), Calvin Berger (Rosanna), and Starting Here, Starting Now. Two-time Fred Astaire Award nominee. Film: Magic Camp (Disney+). Television: “Law and Order: SVU,” “Deadbeat,” “Castle” and “Sydney to the Max.” She voices Netossa on the Netflix/DreamWorks series, “She-Ra and the Princesses of Power.", website: "https://hamiltonmusical.com/new-york/home/", image: "https://static.wikia.nocookie.net/hamiltonmusical/images/7/73/KrystalJoyBrown.jpg/revision/latest?cb=20200524182702")
+Actor.create(name: "Krystal Joy Brown", bio: "Broadway: Motown The Musical (Diana Ross), Big Fish (Josephine Bloom), Leap of Faith (Ornella), Hair (Dionne/Abe Lincoln). National Tour: RENT (Mimi). Off-Broadway: Man in the Ring (Sadie), Calvin Berger (Rosanna), and Starting Here, Starting Now. Two-time Fred Astaire Award nominee. Film: Magic Camp (Disney+). Television: “Law and Order: SVU,” “Deadbeat,” “Castle” and “Sydney to the Max.” She voices Netossa on the Netflix/DreamWorks series, “She-Ra and the Princesses of Power.", website: "https://hamiltonmusical.com/new-york/home/", image: "https://bsp-static.playbill.com/dims4/default/a35b56e/2147483647/resize/x250%3C/quality/90/?url=http%3A%2F%2Fpb-asset-replication.s3.amazonaws.com%2F95%2Ffa%2F5462e59c49bba7a5276541074aa3%2FKrystal-Joy-Brown.1378315501.jpg")
 
 ActorCharacter.create(actor_id: 4, character_id: 4, current: true)
 
@@ -300,7 +300,7 @@ ActorCharacter.create(actor_id: 21, character_id: 21, current: true)
 
 Character.create(name: "Fred Casely", description: "Roxie's paramour, a furniture salesman. Shot dead at the beginning of the play, he appears in flashback during the trial.", show_id: 2)
 
-Actor.create(name: "Brian O'Brien", bio: "Broadway: Promises, Promises; The Pirate Queen; Beauty and the Beast; Annie Get Your Gun; Steel Pier. First national tour: Spamalot. TV: “Law & Order: Special Victims Unit.” Hometown: Monmouth Beach, NJ. B.S., Marketing: Seton Hall University.", website: "https://chicagothemusical.com/", image: "https://lh3.googleusercontent.com/proxy/TOJQw9nTYbGvF9U9L0yJhl_BI2GMZMFyRa_ojq_y1RsOOycFRNmtozyqg6A99ebAP_PcWnyCKxG_nGQHmt_Xx2u0-Zu09VQrl9wSQuzi5gYJolW51iOB-hPfihzdWmSG9ka4_Ojt7jQm2ucZARidnA")
+Actor.create(name: "Brian O'Brien", bio: "Broadway: Promises, Promises; The Pirate Queen; Beauty and the Beast; Annie Get Your Gun; Steel Pier. First national tour: Spamalot. TV: “Law & Order: Special Victims Unit.” Hometown: Monmouth Beach, NJ. B.S., Marketing: Seton Hall University.", website: "https://chicagothemusical.com/", image: "https://static1.squarespace.com/static/535c1ae1e4b071a2c2e03d91/t/563cd3f8e4b088e6d74270dd/1446827001219/?format=1500w")
 
 ActorCharacter.create(actor_id: 22, character_id: 22, current: true)
 
@@ -491,19 +491,45 @@ ActorCharacter.create(actor_id: 43, character_id: 43, current: true)
 
 ########Ain't Too Proud Character#######
 
+website = "https://www.ainttooproudmusical.com/"
+
 Character.create(name: "Paul Williams", description: "(July 2, 1939 – August 17, 1973) was an American baritone singer and choreographer. Williams was noted for being one of the founding members and original lead singer of the Motown group The Temptations. Along with Elbridge Al Bryant, Otis Williams, and fellow Alabamians Eddie Kendricks and Melvin Franklin, Williams was a member of The Temptations. Personal problems and failing health forced Williams to retire in 1971. He was found dead two years later as the result of an apparent suicide.", show_id: 1)
+
+Actor.create(name: "James Harkness", bio: "Most recently seen on Broadway in Beautiful: The Carole King Musical, he is a veteran of not only the stage (Aida, The Color Purple, Chicago), but also a best director nominee, an award‑winning choreographer, and a songwriter. His debut show, Fragments of Me, performed at the Metropolitan Room in New York, is available on YouTube. Harkness is proud and humbled to stand with this company to tell this story of the legendary group that is a firm part of American culture. Thanks to my manager Dave Brenner and love to my family. Instagram/Twitter: lord.harkness/LordHarkness. YouTube: jklh37.", website: website, image: "https://bsp-static.playbill.com/dims4/default/6a8f7a5/2147483647/resize/x250%3C/quality/90/?url=http%3A%2F%2Fpb-asset-replication.s3.amazonaws.com%2Fee%2Fd4%2F6699557a4eb9b1f155dcf9468f88%2FJames-Harkness.jpg")
+
+ActorCharacter.create(actor_id: 44, character_id: 44, current: true)
 
 
 Character.create(name: "Melvin Franklin", description: "(October 12, 1942 – February 23, 1995) better known by the stage name Melvin Franklin, or his nickname Blue, was an American bass singer. Franklin was best known for his role as a founding member of Motown singing group The Temptations from 1960 to 1994.", show_id: 1)
 
+Actor.create(name: "Jawan M Jackson", bio: "Born and raised in the heart of Motown, Jawan M. Jackson is a native of Detroit. Jackson made his professional debut starring in Broadway’s Motown The Musical as Melvin Franklin of The Temptations. A graduate of Eastern Michigan University, Jackson began his career as a radio personality for Detroit’s top radio station, Hot 107.5. Upon graduation, he successfully helped instill, develop, and execute a program for high school students who had a passion for pursuing a career in acting and the arts. Film: Sparkle (2012), Love Thy Self (2014). TV: Netflix’s “The Get Down” (2016), PBS’s “Doo Wop Generations” (2018). Instagram: JawanJackson4. Big thanks to my agents at Carson Kolker, Barry and Oscar, and manager Arthur Massei.", website: website, image: "https://imaging.broadway.com/images/regular-43/w735/104187-19.jpg")
 
-Character.create(name: "David Ruffin", description: "(born Davis Eli Ruffin,[1] January 18, 1941 – June 1, 1991) was an American soul singer and musician most famous for his work as one of the lead singers of the Temptations (1964–68) during the group's 'Classic Five'period as it was later known. He was the lead voice on such famous songs as 'My Girl' and 'Ain't Too Proud to Beg.'", show_id: 1)
+ActorCharacter.create(actor_id: 45, character_id: 45, current: true)
 
 
-Character.create(name: "Eddie Kendricks", description: '(December 17, 1939 – October 5, 1992) was an American singer and songwriter. Noted for his distinctive falsetto singing style, Kendricks co-founded the Motown singing group The Temptations, and was one of their lead singers from 1960 until 1971. He was the lead voice on such famous songs as "The Way You Do the Things You Do", "Get Ready", and "Just My Imagination (Running Away with Me)". As a solo artist, Kendricks recorded several hits of his own during the 1970s, including the number-one single "Keep on Truckin"', show_id: 1)
+Character.create(name: "David Ruffin", description: "Born Davis Eli Ruffin,[1] January 18, 1941 – June 1, 1991) was an American soul singer and musician most famous for his work as one of the lead singers of the Temptations (1964–68) during the group's 'Classic Five'period as it was later known. He was the lead voice on such famous songs as 'My Girl' and 'Ain't Too Proud to Beg.'", show_id: 1)
+
+Actor.create(name: "Matt Manuel", bio: "A singer/songwriter from Detroit, Michigan, and is excited to be making his Broadway debut in Ain't Too Proud. He was last seen making his professional acting debut as Marvin Gaye in the Touring Cast of Motown: The Musical. Prior to acting, He was a lead vocalist in the Simone Vitale orchestra, and the guest entertainer group, Evolution. Previous credits include: Akoma the short film, and American Idol.", website: website, image: "https://imaging.broadway.com/images/regular-43/w735/116640-19.jpg")
+
+ActorCharacter.create(actor_id: 46, character_id: 46, current: true)
+
+
+Character.create(name: "Eddie Kendricks", description: '(December 17, 1939 – October 5, 1992) Was an American singer and songwriter. Noted for his distinctive falsetto singing style, Kendricks co-founded the Motown singing group The Temptations, and was one of their lead singers from 1960 until 1971. He was the lead voice on such famous songs as "The Way You Do the Things You Do", "Get Ready", and "Just My Imagination (Running Away with Me)". As a solo artist, Kendricks recorded several hits of his own during the 1970s, including the number-one single "Keep on Truckin"', show_id: 1)
+
+Actor.create(name: "Jelani Remy", bio: "A New Jersey native thrilled to be part of this show! Credits include Disney’s The Lion King (Simba), Disney’s High School Musical (Chad), Smokey Joe’s Cafe, The Apple Boys (Jack). Thanks to God, my family, AEA and VGP Management. @itsjelaniremy “Be the change you wish to see in the world.”", website: website, image: "https://54below-media.nyc3.digitaloceanspaces.com/app/uploads/2017/03/Remy-Jelani.jpg")
+
+ActorCharacter.create(actor_id: 47, character_id: 47, current: true)
 
 
 Character.create(name: "Otis Williams", description: '(born Otis Miles Jr.; October 30, 1941) is an American baritone singer.[1][2] Nicknamed "Big Daddy", he is occasionally also a songwriter and a record producer. Williams is the founder and last surviving original member of the Motown vocal group The Temptations,[1] a group in which he continues to perform; he also owns the rights to the Temptations name.', show_id: 1)
+
+Actor.create(name: "Nik Walker", bio: "Credits include... B’way/B’way-adjacent: Hamilton (as Aaron Burr), Motown, Peter and the Starcatcher; TV/Film: L&O SVU. NYU ’10. Love to God, Ma, Sarah, Ferris, Des and the ATP crew, all friends, fam, savages and road dogs... and a special thanks to the late Tony Stark, the genius-billionaire-playboy-philanthropist, for making that sacrifice play, laying down on the wire so that we all could live (#whateverittakes) - @nikkywalks", website: "https://www.ainttooproudmusical.com/", image: "https://imaging.broadway.com/images/regular-43/w735/116639-19.jpg")
+
+ActorCharacter.create(actor_id: 48, character_id: 48, current: true)
+
+
+Actor.create(name: "Alex Marz", bio: "Alex is an actor based in New York City. Off-Broadway: Othello the Remix NYC: Macbeth, Alkestis (The Connelly Theater), Conway (Theaterlab), Black Garden (The Tank), Orientalism (Manhattan Rep) Paris: Black Garden (Théâtre de l'Opprimé) Alex has been a part of workshops and readings at Roundabout, La Mama, New York Theatre Workshop, Ensemble Studio Theatre, The Huntington Theater, and Williamstown Theater Festival. TV: Officer Vogel on Blue Bloods. Alex holds an MFA in Acting from Columbia University. Proud member of AEA and SAG/AFTRA.", website: "https://www.imdb.com/name/nm9542537/?ref_=fn_al_nm_1", image: "https://m.media-amazon.com/images/M/MV5BYjA1ZTI5ODAtY2EwYy00NTU4LTg3ZjAtY2M2YTFkM2NhMzJiXkEyXkFqcGdeQXVyODY4MzUyMDk@._V1_UY317_CR91,0,214,317_AL_.jpg")
+
 
 
 puts "🔥 🔥 🔥 🔥 SEEDED 🔥 🔥 🔥 🔥 "
