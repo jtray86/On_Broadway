@@ -124,19 +124,19 @@ CreativeShow.create(show_id: 5, creative_id: 26)
 
 Character.create(name: "Aaron Burr", description: "A cool, steely reserve. An orphan raised in wealth, plays his cards and opinions close to the vest. Slow to anger, but when he gets there, look out.", show_id: 3)
 
-Actor.create(name: "Daniel Breaker", bio: "BROADWAY: The Book of Mormon, The Performers, Shrek: The Musical (Drama Desk Nomination), Passing Strange (Tony Award Nomination, Drama Desk Nomination, Theatre World Award, Audelco Award), Cymbeline, Well. FILM: Sisters, Limitless, He’s Way More Famous Than You, Redhook Summer (dir. Spike Lee), Passing Strange (dir. Spike Lee). TELEVISION: Unbreakable Kimmy Schmidt," "Mozart in the Jungle," "Unforgettable," "Law & Order: Criminal Intent.", website: "https://hamiltonmusical.com/new-york/home/", image: "https://hamiltonmusical.com/wp-content/uploads/200017/11/Cast-Daniel-Breaker.jpg")
+Actor.create(name: "Daniel Breaker", bio: "BROADWAY: The Book of Mormon, The Performers, Shrek: The Musical (Drama Desk Nomination), Passing Strange (Tony Award Nomination, Drama Desk Nomination, Theatre World Award, Audelco Award), Cymbeline, Well. FILM: Sisters, Limitless, He’s Way More Famous Than You, Redhook Summer (dir. Spike Lee), Passing Strange (dir. Spike Lee). TELEVISION: Unbreakable Kimmy Schmidt," "Mozart in the Jungle," "Unforgettable," "Law & Order: Criminal Intent.", website: "https://hamiltonmusical.com/new-york/home/", image: "https://www.wallofcelebrities.com/celebrity/daniel-breaker/pictures/xxlarge/daniel-breaker_1403797.jpg")
 
 ActorCharacter.create(actor_id: 1, character_id: 1, current: true)
 
 Character.create(name: "John Laurens/Philip Hamilton", description: "Laurens: An ardent young abolitionist and idealist, born into privilege, joining the Revolution. Hamilton’s loyal best friend. Philip: Prodigious, full of life, a wordsmith in the mold of his father Alexander.", show_id: 3)
 
-Actor.create(name: "Daniel Yearwood", bio: "Broadway: INK, Once On This Island, NY Theatre: Grand Hotel (NYCC), Regional: My Very First British Invasion (Papermill) In The Heights (Fulton Theatre). Pace MT Graduate. Incredibly grateful for the opportunity to tell this story. Thank you God, my family, friends, Sheri and Dominic. Psalm 91:1.", website: "https://hamiltonmusical.com/new-york/home/", image: "https://hamiltonmusical.com/wp-content/uploads/20002000/01/DANIEL-YEARWOOD-200-e157844974020096.jpg")
+Actor.create(name: "Daniel Yearwood", bio: "Broadway: INK, Once On This Island, NY Theatre: Grand Hotel (NYCC), Regional: My Very First British Invasion (Papermill) In The Heights (Fulton Theatre). Pace MT Graduate. Incredibly grateful for the opportunity to tell this story. Thank you God, my family, friends, Sheri and Dominic. Psalm 91:1.", website: "https://hamiltonmusical.com/new-york/home/", image: "https://cloudimages.broadwayworld.com/upload13/35678/8B39FB3F-F33F-474D-8CBE8B7AD99D157A.jpg?dt=20200214")
 
 ActorCharacter.create(actor_id: 2, character_id: 2, current: true)
 
 Character.create(name: "Alexander Hamilton", description: "An earnest, ambitious hothead, a man possessed. Speaks his mind, no matter the cost.", show_id: 3)
 
-Actor.create(name: "Miguel Cervantes", bio: "Broadway: Hamilton, If/Then, American Idiot, & 2005th Annual Putnam County Spelling Bee. Additional theater: Giant (Public Theater), Happiness (Lincoln Center), Batboy. TV/Film: The Greatest, Tramps, “Person of Interest,” “BrainDead,” “Madame Secretary,” “Royal Pains”, “The Blacklist.” He graduated from Emerson College, BFA in Musical Theater. His favorite role is 'Daddy' to Jackson & Adelaide. He is not able to do this without the love and support of his wife Kelly.", website: "https://hamiltonmusical.com/new-york/home/", image: "https://hamiltonmusical.com/wp-content/uploads/200017/11/cast-chicago-Miguel-Cervantes200.jpg")
+Actor.create(name: "Miguel Cervantes", bio: "Broadway: Hamilton, If/Then, American Idiot, & 2005th Annual Putnam County Spelling Bee. Additional theater: Giant (Public Theater), Happiness (Lincoln Center), Batboy. TV/Film: The Greatest, Tramps, “Person of Interest,” “BrainDead,” “Madame Secretary,” “Royal Pains”, “The Blacklist.” He graduated from Emerson College, BFA in Musical Theater. His favorite role is 'Daddy' to Jackson & Adelaide. He is not able to do this without the love and support of his wife Kelly.", website: "https://hamiltonmusical.com/new-york/home/", image: "https://gossipgist.com/uploads/27584/miguel-cervantes-imdb.jpg")
 
 ActorCharacter.create(actor_id: 3, character_id: 3, current: true)
 
@@ -144,7 +144,7 @@ ActorCharacter.create(actor_id: 3, character_id: 3, current: true)
 
 Character.create(name: "Eliza Hamilton", description: "Fiercely loyal, self-possessed, proud. Evolves from lovesick, wealthy young woman to the sole keeper of her late husband’s legacy. ", show_id: 3)
 
-Actor.create(name: "Krystal Joy Brown", bio: "Broadway: Motown The Musical (Diana Ross), Big Fish (Josephine Bloom), Leap of Faith (Ornella), Hair (Dionne/Abe Lincoln). National Tour: RENT (Mimi). Off-Broadway: Man in the Ring (Sadie), Calvin Berger (Rosanna), and Starting Here, Starting Now. Two-time Fred Astaire Award nominee. Film: Magic Camp (Disney+). Television: “Law and Order: SVU,” “Deadbeat,” “Castle” and “Sydney to the Max.” She voices Netossa on the Netflix/DreamWorks series, “She-Ra and the Princesses of Power.", website: "https://hamiltonmusical.com/new-york/home/", image: "https://hamiltonmusical.com/wp-content/uploads/20002000/01/KRYSTAL-JOY-BROWN-e157844982000695.jpg")
+Actor.create(name: "Krystal Joy Brown", bio: "Broadway: Motown The Musical (Diana Ross), Big Fish (Josephine Bloom), Leap of Faith (Ornella), Hair (Dionne/Abe Lincoln). National Tour: RENT (Mimi). Off-Broadway: Man in the Ring (Sadie), Calvin Berger (Rosanna), and Starting Here, Starting Now. Two-time Fred Astaire Award nominee. Film: Magic Camp (Disney+). Television: “Law and Order: SVU,” “Deadbeat,” “Castle” and “Sydney to the Max.” She voices Netossa on the Netflix/DreamWorks series, “She-Ra and the Princesses of Power.", website: "https://hamiltonmusical.com/new-york/home/", image: "https://static.wikia.nocookie.net/hamiltonmusical/images/7/73/KrystalJoyBrown.jpg/revision/latest?cb=20200524182702")
 
 ActorCharacter.create(actor_id: 4, character_id: 4, current: true)
 
@@ -152,14 +152,14 @@ ActorCharacter.create(actor_id: 4, character_id: 4, current: true)
 
 Character.create(name: "Angelica Schuyler", description: "Fierce, dazzling, brilliant, can read a room and everyone in it instantly. Deeply in love with Hamilton, who is married to her beloved sister Eliza.", show_id: 3)
 
-Actor.create(name: "Mandy Gonzalez", bio: "A Drama Desk and OBIE Award-winning actress. She is best known for her emotional portrayal of Nina Rosario in the original cast of Lin-Manuel Miranda's Tony Award-winning hit musical In the Heights; she also starred as Elphaba in Wicked (Broadway). TV/Film: 'Madam Secretary,' 'Quantico', 'Doubt,' 'The Good Wife,' 'White Collar' Viral, After, Man on a Ledge, and Across the Universe.  Broadway: AIDA, Lennon, Dance of the Vampires. Mandy has performed with prestigious symphonies across the country and around the world.", website: "https://hamiltonmusical.com/new-york/home/", image: "https://hamiltonmusical.com/wp-content/uploads/200017/11/image005-1-768x768.jpg")
+Actor.create(name: "Mandy Gonzalez", bio: "A Drama Desk and OBIE Award-winning actress. She is best known for her emotional portrayal of Nina Rosario in the original cast of Lin-Manuel Miranda's Tony Award-winning hit musical In the Heights; she also starred as Elphaba in Wicked (Broadway). TV/Film: 'Madam Secretary,' 'Quantico', 'Doubt,' 'The Good Wife,' 'White Collar' Viral, After, Man on a Ledge, and Across the Universe.  Broadway: AIDA, Lennon, Dance of the Vampires. Mandy has performed with prestigious symphonies across the country and around the world.", website: "https://hamiltonmusical.com/new-york/home/", image: "https://imagesvc.meredithcorp.io/v3/mm/image?q=85&c=sc&poi=face&w=1333&h=1777&url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F20%2F2020%2F01%2Fmandy-headshot-2020.2-1-2000.jpg")
 
 ActorCharacter.create(actor_id: 5, character_id: 5, current: true)
 
 
 Character.create(name: "George Washington", description: "Authoritative, regal, aloof, aware of his place in history at all times.", show_id: 3)
 
-Actor.create(name: "Tamar Greene", bio: "After a year and a half in the Chicago company, Tamar is blessed and ever grateful to continue his run as George Washington on Broadway! Off-Broadway: Show Boat (Lincoln Center/PBS), The Golden Apple (NY City Center). National Tour: Hamilton (George Washington, Chicago), Love Never Dies, The Gershwins’ Porgy and Bess, After Midnight. Regional: Sister Act, Ragtime, Little Shop of Horrors. Much Love!", website: "https://hamiltonmusical.com/new-york/home/", image: "https://hamiltonmusical.com/wp-content/uploads/200018/09/Cast-Chicago-Tamar-Greene.jpg")
+Actor.create(name: "Tamar Greene", bio: "After a year and a half in the Chicago company, Tamar is blessed and ever grateful to continue his run as George Washington on Broadway! Off-Broadway: Show Boat (Lincoln Center/PBS), The Golden Apple (NY City Center). National Tour: Hamilton (George Washington, Chicago), Love Never Dies, The Gershwins’ Porgy and Bess, After Midnight. Regional: Sister Act, Ragtime, Little Shop of Horrors. Much Love!", website: "https://hamiltonmusical.com/new-york/home/", image: "https://imaging.broadway.com/images/regular-43/w735/115868-15.jpg")
 
 ActorCharacter.create(actor_id: 6, character_id: 6, current: true)
 
@@ -167,14 +167,14 @@ ActorCharacter.create(actor_id: 6, character_id: 6, current: true)
 Character.create(name: "Marquis De Lafayette/Thomas Jefferson", description: "Lafayette: An earnest, idealistic Frenchman who reveals himself to be a superb military commander. Jefferson: Relaxed, jazzy, brilliant, effortlessly cool and ruffled ONLY by Hamilton.", show_id: 3)
 
 Actor.create(name: "James Monroe Iglehart", bio: "Marquis de Lafayette/Thomas Jefferson
-Broadway: Genie in Aladdin (Tony Award, Drama Desk Award); Bobby in Memphis; Mitch in Spelling Bee. TV: Coriolanus Burt on Netflix's 'Unbreakable Kimmy Schmidt,' Fox's “Gotham,' Lance Strongbow on 'Disney's Tangled.' Film: Upcoming - Three Christs opposite Richard Gere, Peter Dinklage. Solo Show: How the Heck Did I Get Here? Multiple sold-out engagements at 54 Below. Member of hip-hop group Freestyle Love Supreme. To Dawn - the best wife in the world!", website: "https://hamiltonmusical.com/new-york/home/", image: "https://hamiltonmusical.com/wp-content/uploads/200017/11/Cast-James-Monroe-Iglehart.jpg")
+Broadway: Genie in Aladdin (Tony Award, Drama Desk Award); Bobby in Memphis; Mitch in Spelling Bee. TV: Coriolanus Burt on Netflix's 'Unbreakable Kimmy Schmidt,' Fox's “Gotham,' Lance Strongbow on 'Disney's Tangled.' Film: Upcoming - Three Christs opposite Richard Gere, Peter Dinklage. Solo Show: How the Heck Did I Get Here? Multiple sold-out engagements at 54 Below. Member of hip-hop group Freestyle Love Supreme. To Dawn - the best wife in the world!", website: "https://hamiltonmusical.com/new-york/home/", image: "https://54below-media.nyc3.digitaloceanspaces.com/app/uploads/2016/03/Iglehart-James-Monroe-1.png")
 
 ActorCharacter.create(actor_id: 7, character_id: 7, current: true)
 
 
 Character.create(name: "Hercules Muligan/James Madison", description: "Muligan: The life of the party, dripping with swagger, streetwise and hilarious. Joins the revolution to get out of being a tailor’s apprentice, and befriends Laurens, Hamilton and Lafayette. Madison: Incisively intelligent, quiet, professional. A former Hamilton ally, he becomes Jefferson’s detail man concerning all matters—he gets things done.", show_id: 3)
 
-Actor.create(name: "Fergie L. Philippe", bio: "Broadway Debut. Credits - National Tour: Hamilton (Mulligan/Madison, Philip Tour). Regional: Ragtime (Coalhouse, Playmaker’s Rep Theatre), Twelfth Night (Orsino, Arkansas Shakes), Parade (Conley, MGR Playhouse), Violet (Flick, Heritage Theatre Festival) and Jesus Christ Superstar (Muny). Love to his family, HCKR Associates and he dedicates every performance to his father, Fernand, may he rest in peace. BFA, Elon University. Carpe Diem.", website: "https://hamiltonmusical.com/new-york/home/", image: "https://hamiltonmusical.com/wp-content/uploads/200018/0200/0C72005B0F-EB4200-40CA-A9D200-B6E5C89AE997_1_20001_a.jpeg")
+Actor.create(name: "Fergie L. Philippe", bio: "Broadway Debut. Credits - National Tour: Hamilton (Mulligan/Madison, Philip Tour). Regional: Ragtime (Coalhouse, Playmaker’s Rep Theatre), Twelfth Night (Orsino, Arkansas Shakes), Parade (Conley, MGR Playhouse), Violet (Flick, Heritage Theatre Festival) and Jesus Christ Superstar (Muny). Love to his family, HCKR Associates and he dedicates every performance to his father, Fernand, may he rest in peace. BFA, Elon University. Carpe Diem.", website: "https://hamiltonmusical.com/new-york/home/", image: "https://www.smliv.com/downloads/3780/download/Fergie%20Headshot.jpg?cb=5e6a5f4012d8fe03c5b0c84827454f77&w=640")
 
 
 ActorCharacter.create(actor_id: 8, character_id: 8, current: true)
@@ -182,7 +182,7 @@ ActorCharacter.create(actor_id: 8, character_id: 8, current: true)
 
 Character.create(name: "Peggy Schuyler/Maria Reynolds", description: "Peggy: Sweet, shy, youngest of the three Schuyler Sisters. Reynolds: Sultry, young, calculating. Affects the role of a damsel in distress to seduce Hamilton.", show_id: 3)
 
-Actor.create(name: "Aubin Wise", bio: "Aubin comes directly to Broadway from the original cast of Hamilton in Chicago.  Regionally, she was seen in the American Premiere The Count of Monte Cristo, Big Fish and The Color Purple.   For TV, Aubin shot the ABC pilot The Finest, an episode of “Atlanta” (FX) and the ABC Diversity Showcase.  Aubin dedicates every performance to her mother and son.", website: "https://hamiltonmusical.com/new-york/home/", image: "https://hamiltonmusical.com/wp-content/uploads/200017/11/Cast-Chicago-Aubin-Wise.jpg")
+Actor.create(name: "Aubin Wise", bio: "Aubin comes directly to Broadway from the original cast of Hamilton in Chicago.  Regionally, she was seen in the American Premiere The Count of Monte Cristo, Big Fish and The Color Purple.   For TV, Aubin shot the ABC pilot The Finest, an episode of “Atlanta” (FX) and the ABC Diversity Showcase.  Aubin dedicates every performance to her mother and son.", website: "https://hamiltonmusical.com/new-york/home/", image: "https://imaging.broadway.com/images/regular-43/w735/115869-17.jpeg")
 
 
 ActorCharacter.create(actor_id: 9, character_id: 9, current: true)
@@ -191,7 +191,7 @@ ActorCharacter.create(actor_id: 9, character_id: 9, current: true)
 
 Character.create(name: "King George", description: "The King of England. Entitled, pouty nihilist. Sees the American Colonies as a deluded former lover, who will come crawling back.", show_id: 3)
 
-Actor.create(name: "Euan Morton", bio: "Euan Morton just finished the national tour of Hedwig and the Angry Inch. He originated the role of Boy George in Taboo in London and New York (Olivier and Tony Award nominations, Theatre World Award). Additional Broadway credits: Cyrano de Bergerac and Sondheim on Sondheim. Selected Off-Broadway and regional credits include Measure for Pleasure at The Public Theater (Obie Award) and Parade at Ford’s Theatre (Helen Hayes Award). A favorite recent collaboration was with Tony Kushner and Maurice Sendak on the new musical Brundibar.", website: "https://hamiltonmusical.com/new-york/home/", image: "https://hamiltonmusical.com/wp-content/uploads/200017/11/Cast-Euan-Morton.jpg")
+Actor.create(name: "Euan Morton", bio: "Euan Morton just finished the national tour of Hedwig and the Angry Inch. He originated the role of Boy George in Taboo in London and New York (Olivier and Tony Award nominations, Theatre World Award). Additional Broadway credits: Cyrano de Bergerac and Sondheim on Sondheim. Selected Off-Broadway and regional credits include Measure for Pleasure at The Public Theater (Obie Award) and Parade at Ford’s Theatre (Helen Hayes Award). A favorite recent collaboration was with Tony Kushner and Maurice Sendak on the new musical Brundibar.", website: "https://hamiltonmusical.com/new-york/home/", image: "https://baltimorefishbowl.com/wp-content/uploads/2020/03/Euan-Morton-Headshot.jpg")
 
 
 ActorCharacter.create(actor_id: 10, character_id: 10, current: true)

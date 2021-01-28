@@ -7,6 +7,8 @@
     <%=submit_tag "Login"%>
 <%end%>
 
+    <%= button_to "Signup", new_admin_path, method: "get" %>
+
 <%if flash[:message]%>
     <p><%=flash[:message]%></p> 
 <%end%>

@@ -1,6 +1,8 @@
+<div id="creativeindex" >
 <h1>Creatives</h1>
 
 <%=form_tag('/creatives', method: :get) do %>
+    <p id="indexsearch" > Case Sensitive </p>
     <%=text_field_tag :search, params[:search]%>
     <%=submit_tag "Search 🔍"%>
 <%end%>
@@ -8,9 +10,10 @@
     <%if flash[:message]%>
             <p><%=flash[:message]%></p>
     <%end%>
-    
+    <div class="list">
+    <p id="feature"><strong>Featured Creatives</strong></p>
 <ul>
-    <% @creatives.each do |creative| %>   
+    <% @creatives.sample(8).each do |creative| %>   
         <li>
             <%= link_to creative.name, creative_path(creative) %> 
             <img src=<%=creative.image%> alt=<%=creative.name%> />    
@@ -18,5 +21,7 @@
     <%end%>
 </ul>
 
-   
+</div>
+</div>
+
 
