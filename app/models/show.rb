@@ -5,6 +5,6 @@ class Show < ApplicationRecord
     belongs_to :admin
 
     validates :name, presence: true , uniqueness: {case_sensitive: false} 
-    validates :description, presence: true, length: {minimum: 250} 
+    validates :description, presence: true, length: {minimum: 10} 
 
 end

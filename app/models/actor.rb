@@ -3,6 +3,6 @@ class Actor < ApplicationRecord
     has_many :characters, through: :actor_characters
 
     validates :name, presence: true  
-    validates :bio, presence: true, length: {minimum: 100} 
+    validates :bio, presence: true, length: {minimum: 5} 
    
 end

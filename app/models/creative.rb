@@ -3,5 +3,5 @@ class Creative < ApplicationRecord
     has_many :shows, through: :creative_shows
 
     validates :name, presence: true  
-    validates :bio, presence: true, length:{minimum: 100} 
+    validates :bio, presence: true, length:{minimum: 10} 
 end
