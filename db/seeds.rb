@@ -5,53 +5,118 @@ Show.destroy_all
 Creative.destroy_all 
 CreativeShow.destroy_all
 
-jen = Admin.create(username: "jtray", name: "Jen", password: "abc123")
-alex = Admin.create(username: "mahz", name: "Alex", password: "def456")
 
-5.times do 
-    name = Faker::Name.unique.name 
-    bio = Faker::Lorem.paragraphs(number: 10) 
-    website = Faker::Internet.domain_name 
-    image = Faker::LoremFlickr.image(size: "50x60")
-    Actor.create(name: name, bio: bio, website: website, image: image)
-end
+Show.create(name: "Ain't Too Proud
+The Life and Times of The Temptations"
+, description: "AIN'T TOO PROUD is the electrifying new musical that follows The Temptations' extraordinary journey from the streets of Detroit to the Rock & Roll Hall of Fame. With their signature dance moves and unmistakable harmonies, they rose to the top of the charts creating an amazing 42 Top Ten Hits with 14 reaching number one. The rest is history — how they met, the groundbreaking heights they hit and how personal and political conflicts threatened to tear the group apart as the United States fell into civil unrest. This thrilling story of brotherhood, family, loyalty and betrayal is set to the beat of the group's treasured hits, including “My Girl,” “Just My Imagination,” “Get Ready,” “Papa Was a Rolling Stone” and so many more.
+", theater: "Imperial Theatre", website: "https://www.ainttooproudmusical.com/", image: "https://www.ainttooproudmusical.com/wp-content/themes/ainttooproud/img/hero.jpg", admin_id: 1)
+Show.create(name: "Chicago", description: "A true New York City institution, CHICAGO has everything that makes Broadway great: a universal tale of fame, fortune and all that jazz; one showstopping song after another; and the most astonishing dancing you’ve ever seen. No wonder CHICAGO has been honored with 6 Tony Awards, 2 Olivier Awards, a Grammy® and thousands of standing ovations. It’s also no surprise that CHICAGO has wowed audiences all around the world, from Mexico City to Moscow, from São Paulo to South Africa. Whether you’re looking for your first Broadway musical, whether you’ve seen the Academy Award®-winning film and want to experience the show live onstage or whether you’ve seen it before and want to recapture the magic, CHICAGO always delivers.", theater: "Ambassador Theatre", website: "chicagothemusical.com", image: "https://images.app.goo.gl/Kiogj4ioAwXtW4129", admin_id: 1)
+Show.create(name: "Hamilton", description: "Hamilton is the story of the unlikely Founding Father determined to make his mark on the new nation as hungry and ambitious as he is. From bastard orphan to Washington's right-hand man, rebel to war hero, a loving husband caught in the country's first sex scandal, to the Treasury head who made an untrusting world believe in the American economy. George Washington, Eliza Hamilton, Thomas Jefferson and Hamilton's lifelong friend/foil Aaron Burr all make their mark in this astonishing new musical exploration of a political mastermind.", theater: "Richard Rodgers Theatre", website: "https://hamiltonmusical.com/new-york/home/", image: "https://images.app.goo.gl/1evHwkcW7u9NJRoU6", admin_id: 3)
+Show.create(name: "Wicked", description: "Wicked, the Broadway sensation, looks at what happened in the Land of Oz…but from a different angle. Long before Dorothy arrives, there is another girl, born with emerald-green skin—smart, fiery, misunderstood, and possessing an extraordinary talent. When she meets a bubbly blonde who is exceptionally popular, their initial rivalry turns into the unlikeliest of friendships…until the world decides to call one “good,” and the other one “wicked.”", theater: "Gershwin Theatre", website: "https://wickedthemusical.com/", image: "https://images.app.goo.gl/ug6KRCPjcaWg3KN5A", admin_id: 2)
+Show.create(name: "Aladdin" , description: "In the middle-eastern town of Agrabah, Princess Jasmine is feeling hemmed in by her father’s desire to find her a royal groom. Meanwhile, the Sultan’s right-hand man, Jafar, is plotting to take over the throne. When Jasmine sneaks out of the palace incognito, she forms an instant connection with Aladdin, a charming street urchin and reformed thief.
+After being discovered together, Aladdin is sentenced to death, but Jafar saves him by ordering him to fetch a lamp from the Cave of Wonders. Where there’s a lamp, there’s a Genie, and once Aladdin unwittingly lets this one out, anything can happen! Will Aladdin’s new identity as “Prince Ali” help him win Jasmine’s heart and thwart Jafar’s evil plans? Will the Genie’s wish for freedom ever come true?", theater: "New Amsterdam Theatre", website: "https://www.aladdinthemusical.com/", image: "https://images.app.goo.gl/1dt6dp6rH9L8q5Xm8", admin_id: 1)
 
-5.times do 
-    name = Faker::Movie.title 
-    description = Faker::Lorem.paragraphs(number: 15)
-    theater = Faker::Restaurant.name 
-    website = Faker::Internet.domain_name 
-    image = Faker::LoremFlickr.image(size: "50x60")
-    admin = rand(1..2)
-    Show.create(name: name, description: description, theater: theater, website: website, image: image, admin_id: admin)
-end
+Admin.create(username: "Disney", name: "Disney Theatrical", password: "password")
+Admin.create(username: "Universal", name: "Universal Pictures", password: "password")
+Admin.create(username: "Public", name: " The Public Theater", password: "password")
+Admin.create(username: "Weissler", name: " Barry & Fran Weissler", password: "password")
+Admin.create(username: "IT", name: " Ira Pittelman & Tom Hulce,", password: "password")
 
-10.times do 
-    name = Faker::Name.unique.name
-    description = Faker::Lorem.paragraphs(number: 10)
-    show = rand(1..5)
-    Character.create(name: name, description: description, show_id: show)
-end
+########## Ain't too proud  creatives ##########
+Creative.create(name: "Robert Brill", bio: "Robert Brill's designs for theatre, opera, dance and themed entertainment have spanned nearly three decades, and his work has been seen internationally and throughout the US and Canada.
+Brill is a three-time Tony Award nominee for Broadway, where his credits include Ain’t Too Proud: The Life And Times of The Temptations, Summer: The Donna Summer Musical, Assassins, as well as the set and club design for the critically acclaimed revival of Cabaret, at both the Kit Kat Klub and the legendary Studio 54. His other Broadway credits include the recent revivals of Jesus Christ Superstar and Guys and Dolls, A Streetcar Named Desire, Design for Living, Buried Child and many others.", website: "https://www.robertbrilldesign.com/", image: "https://s3.ibdb.com/ibdb/media/person/26059/personfull_1520436801.jpg", specialty: "Scenic Design")
+Creative.create(name: "Paul Tazewell", bio: "Paul Tazewell is an American costume designer for the theatre, dance, and opera and television. He received the 2016 Tony Award for best costume design for Hamilton. In 2016, he and his design team were awarded an Emmy for their work on The Wiz Live!. He is recipient of six total Tony Award nominations for costume design", website: "https://www.paultazewelldesign.com/", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7bNLq0FJ0LRrcuV7M7uhzM4v85vYIwOKuDg&usqp=CAU", specialty: "Costume Design")
+Creative.create(name: "Howell Binkley", bio: "Howell Binkley (July 25, 1956 – August 14, 2020)[1] was a professional lighting designer in New York City. He received the Tony Award for Best Lighting Design in a Musical for Jersey Boys in 2006, and again in 2016 for Hamilton. He died due to lung cancer on August 14, 2020.[2]", website: "https://www.howellbinkley.com/", image: "https://s3.ibdb.com/ibdb/media/person/25554/personfull_1481220167.jpg", specialty: "Lighting Design")
+Creative.create(name: "Steve Canyon Kennedy", bio: "Kennedy's Broadway sound design credits include On Your Feet, Doctor Zhivago, Lady Day at Emersonâ€™s Bar and Grill (Tony Award), Hands on a Hardbody (Drama Desk Award), Jesus Christ Superstar, Catch Me If You Can (Tony nomination), Guys and Dolls, Mary Poppins, The Lion King, Jersey Boys (Drama Desk Award), Billy Crystalâ€™s 700 Sundays, Rent, Hairspray, The Producers, Aida, Titanic, Big, How to Succeed in Business Without Really Trying, Carousel, and The Whoâ€™s Tommy (Drama Desk Award).", website: website, image: "https://s3.ibdb.com/ibdb/media/person/70547/personfull_1411145871.jpg", specialty: "Sound Design")
+Creative.create(name: " Walter Trarbach", bio: "Credits include: Doctor Zhivago and The Radio City Christmas Spectacular, and Ain't Too Proud. Other Designs: Queen of the Mist, I Am Anne Hutchinson/I Am Harvey Milk, The Man in the Ceiling, The Tin Pan Alley Rag, Becky Shaw, Measure for Pleasure, Farragut North, I Love You Because, Love, Loss, and What I Wore, and Mr. Marmalade.", website: website, image: "https://s3.ibdb.com/ibdb/media/person/391807/personfull_1507575293.jpg", specialty: "Sound Design")
+Creative.create(name: " Peter Nigrini", bio: "a projection designer for live theater. His best-known designs include Dear Evan Hansen, Fela!, and Here Lies Love. He also works occasionally as a scenic and lighting designer, most notably his longstanding collaboration with Nature Theater of Oklahoma. He is also a lecturer at New York University[1]", website: "http://www.nigrini.net/", image: "https://s3.ibdb.com/ibdb/media/person/104259/personfull_1555692215.jpeg", specialty: "Projection Design")
+Creative.create(name: " Charles G. LaPointe", bio: "Broadway: Memphis, 33 Variations, Guys and Dolls, In the Heights, Jersey Boys, The Color Purple, Martin Short: Fame ,Good Vibrations, The Apple Tree, A Raisin in the Sun, Cat on a Hot Tin Roof, The Lieutenant of Inishmoor, Radio Golf, Sight Unseen, Cymbeline, Henry IV, The Rivals, Xanadu, and Superior Donuts. Jersey Boys U.S. tour, Chicago, Las Vegas Toronto, London, and Melbourne. The Color Purple national tour, Xanadu national tour, and In The Heights national tour. ", website: website, image: "https://www.broadwayworld.com/ezoimgfmt/cloudimages.broadwayworld.com/headshots/69846sm.jpg?dt=20210127&ezimgfmt=rs:156x193/rscb12/ng:webp/ngcb12", specialty: "Hair and Wig Design")
 
-5.times do 
-    name = Faker::Name.unique.name 
-    bio = Faker::Lorem.paragraphs(number: 10) 
-    website = Faker::Internet.domain_name 
-    image = Faker::LoremFlickr.image(size: "50x60")
-    specialty = ["Costumes", "Sets", "Lights", "Sound", "Pyro"].sample
-    Creative.create(name: name, bio: bio, website: website, image: image, specialty: specialty)
-end
+########Chicago creative ###########
+Creative.create(name:  "John Lee Beatty", bio: " is an American scenic designer who has created set designs for more than 110 Broadway shows and has designed for other productions. He has won two Tony Awards, for Talley's Folly (1980) and The Nance (2013), and been nominated for 13 more, and he has won five Drama Desk Awards and been nominated for 10 others.", website: "whttps://en.wikipedia.org/wiki/John_Lee_Beatty", image: "https://s3.ibdb.com/ibdb/media/person/26041/personfull_1505932657.jpg", specialty: "Scenic Design")
+Creative.create(name:  "William Ivey Long", bio: "William Ivey Long most recently designed costumes for A Christmas Story, Live! for the FOX Television Network. He also recently designed The Prince of Broadway for legendary director Hal Prince, and the revised stage musical Young Frankenstein in London’s West End for Mel Brooks, having previously designed the original production on Broadway in 2009.  Recent Off -Broadway designs include The Portuguese Kid by John Patrick Shanley, and Big Night by Paul Rudnick. He was nominated for an Emmy Award for his work on Grease: Live! for the FOX, and designed the re-imagination of The Rocky Horror Picture Show (starring Laverne Cox and Tim Curry) - also for FOX. He is currently represented on Broadway with A Bronx Tale: The Musical; and Chicago, now in its 22ND year. He recently completed a 4 year elected term as Chairman of the Board for The American Theatre Wing.  Mr. Long has designed costumes for over 70 Broadway productions, and has been nominated for 15 Tony Awards, winning 6 times.  ", website: "https://williamiveylong.com/", image: "https://s3.ibdb.com/ibdb/media/person/25067/personfull_1461170851.jpg" , specialty: "Costume Design")
+Creative.create(name: " Ken Billington", bio: "Billington has been nominated for the Tony Award for Best Lighting Design nine times and in 1997 won for the revival of Chicago, which also garnered him the Drama Desk Award for Outstanding Lighting Design.
+In November 2015, Billington was inducted into the Theater Hall of Fame.[", website: "https://www.playbill.com/person/ken-billington-vault-0000003255", image: "https://www.playbill.com/playbillpagegallery/headshot-gallery?asset=00000150-ac7a-d16d-a550-ec7ee0b20000&type=PersonHeadShot", specialty: "Lighting Design")
+Creative.create(name: "Scott Lehrer", bio: "Scott Lehrer’s work as a sound designer and engineer/producer can be heard in a variety of media, from Broadway plays and musicals to music recordings, TV documentaries, radio dramas, film soundtracks and museum installations.", website: "https://scottlehrersound.com/", image: "https://bsp-static.playbill.com/dims4/default/366192a/2147483647/resize/x250%3C/quality/90/?url=http%3A%2F%2Fpb-asset-replication.s3.amazonaws.com%2F82%2Ff2%2F7d72b3c348afa4e9a364b86ee979%2Fscott-lehrer.jpg", specialty: "Sound Design")
+Creative.create(name: "Rolando Beauchamp", bio: "Rolando Beauchamp is a New York-based hairstylist. He began his career on the floor of Bumble & Bumble, where he grew into one of their most recognized and talented stylists. Rolando has polished the coifs of celebrities including Heidi Klum, Zazie Beetz, Amanda Seyfried, Eva Mendes, Margot Robbie, Brie Larson, and more. His creative vision has been called upon by top designers Vivienne Westwood, Cynthia Steffe, Karen Walker, Nicole Miller, and Alexandre Herchcovitch, who have all consulted with Rolando on looks for their shows. His work with photographers Miguel Reveriego, David Roemer, Victor Demarchelier, Matthias Vriens-McGrath, Robbie Fimmano, Sebastian Kim, and Miles Aldridge has been featured in publications including Vogue, Numero, i-D, V Magazine, ELLE, Interview, Harper’s Bazaar, and Wonderland.", website: "https://www.thewallgroup.com/artist/rolando-beauchamp", image: "https://la-story.com/wp-content/uploads/2011/06/Rolando-Beauchamp1.jpg", specialty: "Hair Design")
 
-5.times do 
-    show = rand(1..5)
-    creative = rand(1..5)
-    CreativeShow.create(show_id: show, creative_id: creative) 
-end
+######## Hamilton Creative########
+Creative.create(name: " David Korins", bio: "David is the award-winning creative director of his eponymous creative firm.
+He has been awarded an Emmy Award, Lortel Award, an Obie Award, two Drama Desk Awards, three Henry Hewes Awards, and three Tony Award nominations.", website: "http://korinsstudio.com/", image: "https://s3.ibdb.com/ibdb/media/person/406005/personfull_1461171684.jpg", specialty: "Scenic Design")
+Creative.create(name: "Nevin Steinberg", bio: "A Tony Award-winning Broadway sound designer, Nevin is a passionate collaborator on a wide range of live events and theater productions. In 2019 he won the Tony Award for Best Sound Design for HADESTOWN.  His other current Broadway projects include TINA: THE TINA TURNER MUSICAL, the contemporary smash DEAR EVAN HANSEN, and the blockbuster HAMILTON. Other recent shows include FREESTYLE LOVE SUPREME, the revival of FRANKIE AND JOHNNY IN THE CLAIR DE LUNE, THE CHER SHOW, BANDSTAND,  BRIGHT STAR with Steve Martin and Edie Brickell, IT SHOULDA BEEN YOU, and Terrence McNally’s MOTHERS AND SONS.  ", website: "https://themodernprojects.com/", image: "https://s3.ibdb.com/ibdb/media/person/108049/personfull_1538663337.jpg", specialty: "Sound Design")
 
-5.times do 
-    character = rand(1..5)
-    actor = rand(1..5)
-    ActorCharacter.create(actor_id: actor, character_id: character, current: false) 
-end
+##########Wicked##########
+
+Creative.create(name: "Eugene Lee", bio: "is an American set designer who has worked as the production designer for Saturday Night Live since the show's premiere in 1975. He has won Tony Awards for Bernstein’s Candide, Sondheim’s Sweeney Todd, and Wicked, as well as the Drama Desk Award for Outstanding Set Design. Other New York theatre work includes Amazing Grace,[2] Alice in Wonderland, The Normal Heart, Agnes of God, Ragtime, Uncle Vanya, Ruby Sunrise, Bounce, and A Number. Film credits include Coppola’s Hammett, Huston’s Mr. North and Malle’s Vanya on 42nd Street. ", website: "https://en.wikipedia.org/wiki/Eugene_Lee_(designer)", image: "https://s3.ibdb.com/ibdb/media/person/25052/personfull_1461614479.jpg", specialty: "Scenic Design")
+Creative.create(name: "Susan Hilferty", bio: "Susan Hilferty has designed over 300 productions across the globe including the United States, UK, Canada, Japan, Ireland, Australia, Korea, New Zealand, Mexico, Malaysia, Spain, Brazil, Germany, and South Africa. Her many Broadway designs include Wicked (Tony, Outer Critics Circle, and Drama Desk awards and Olivier nomination), Present Laughter (Tony nomination), Hands on a Hardbody, Spring Awakening (Tony nomination), Lestat (Tony nomination), Annie (2013 Revival), Into the Woods (Tony and Drama Desk nominations; Hewes Award), and Frank Wildhorn’s Wonderland.", website: "https://www.susanhilferty.com/", image: "https://www.susanhilferty.com/wp-content/uploads/sites/18/2019/12/Susan-Hilferty-Head-Shot.jpg", specialty: "Costume Design")
+Creative.create(name: "Kenneth Posner", bio: "an American lighting designer, working on Broadway, Off-Broadway, and in American regional theatre. His most notable designs include the musicals Wicked and Hairspray, two highly regarded musicals of the early 21st century. In 2011, he won the Tony Award for Best Lighting Design in a Play for his work on The Coast of Utopia (Part 2 - Shipwreck).", website: "https://en.wikipedia.org/wiki/Kenneth_Posner", image: "https://s3.ibdb.com/ibdb/media/person/25851/personfull_1462374423.jpg", specialty: "Lighting Design")
+Creative.create(name: "Tony Meola", bio: " Lysistrata Jones (associate producer as well as sound design); …Drood (Drama Desk Award); First Date (associate producer); Pal Joey; The Ritz; Laugh Whore; Man of La Mancha; Sweet Smell of Success; Copenhagen; Kiss Me, Kate; Footloose; The Lion King (Drama Desk Award); The Sound of Music; A Christmas Carol (MSG); Steel Pier; Forum; The King and I; Moon Over Buffalo; Smokey Joe’s Cafe; Guys and Dolls; Five Guys Named Moe; She Loves Me; The Red Shoes; Anything Goes. London: Kiss Me, Kate; The Lion King; Smokey Joe’s Cafe; and Anything Goes.", website: "https://www.playbill.com/person/tony-meola-vault-0000030523", image: "https://bsp-static.playbill.com/dims4/default/c48b8dd/2147483647/resize/x250%3C/quality/90/?url=http%3A%2F%2Fpb-asset-replication.s3.amazonaws.com%2Fe9%2F93%2F9b7feaf443aca22dc5db39bcdb52%2FTony-Meola-07.jpg", specialty: "Sound Design")
+Creative.create(name: "Elaine J. McCarthy", bio: "mccarthy's international career spans 23 years in nearly every area of live performance.  broadway highlights include wicked, spamalot, impressionism, the people in the picture, assassins, man of la mancha, into the woods, thurgood, and judgment at nuremberg.  off-broadway credits include frequency hopping (set and projections), distracted (set and projections), embedded, fran's bed, speaking in tongues, suitcase, the stendhal syndrome, once in a lifetime, an empty plate at the cafe du grand boeuf, limonade tous les jours, the it girl, the thing about men, and notes from the field.  her extensive opera work includes great scott, iolanta, everest, tristan and isolde, moby dick, cold mountain, mazeppa, dead man walking and war and peace.", website: "http://www.ejmdesign.net/", image: "http://www.ejmdesign.net/images/ejmcolorm.jpg?crc=373995969", specialty: "Projection Design")
+Creative.create(name: "Tom Watson", bio: "Tom Watson is head of the wig and makeup department at the Metropolitan Opera. He has designed wigs for more than 45 Broadway productions. Current and recent Broadway designs include The Addams Family; Promises, Promises; Elling; Million Dollar Quartet; Mrs. Warren's Profession; Wicked; Rock of Ages; South Pacific; Sondheim on Sondheim; A View from the Bridge; and Sunday in the Park with George.", website: "https://www.broadwayworld.com/people/Tom-Watson/", image: "https://www.theatricalindex.com/media/cimage/persons/tom-watson/headshot_headshot.jpg", specialty: "Hair and Wig Design")
+
+
+#########Aladdin Creatives########
+Creative.create(name: " Bob Crowley", bio: "is a theatre designer (scenic and costume), and theatre director. Bob Crowley has received multiple Tony Award nominations, and has won seven times, for designing the Broadway productions of Carousel (1994), Aida (2000), The History Boys (2006), Mary Poppins (2007), The Coast of Utopia (2007), Once (2012) and An American in Paris (2015). He received three other Tony Award nominations in 2015, two for his costumes on The Audience and An American in Paris and one for his scenic designs for Skylight.[2] He is a recipient of the Laurence Olivier Award for Best Set Design and a three-time recipient of the Drama Desk Award for Outstanding Set Design.", website: "https://en.wikipedia.org/wiki/Bob_Crowley", image: "https://s3.ibdb.com/ibdb/media/person/24690/personfull_1576270006.jpg", specialty: "Scenic Design")
+Creative.create(name: "Gregg Barnes", bio: "an American costume designer for stage and film. Barnes is a two-time winner of the Tony Award for Best Costume Design for his work on the Broadway productions of The Drowsy Chaperone (2006) and Follies (2011).", website: "https://en.wikipedia.org/wiki/Gregg_Barnes", image: "https://s3.ibdb.com/ibdb/media/person/24917/personfull_1461349102.jpg", specialty: "Costume Design")
+Creative.create(name: "Natasha Katz", bio: "Katz was nominated for a 2017 Tony Award for Hello, Dolly![3] and a 2017 Olivier Award for The Glass Menagerie.[4] She won the 2016 Tony Award for Best Lighting Design of a Play for her work on Long Day’s Journey Into Night.[5] She has 6 Tony Awards (3 plays, 3 musicals), with 14 nominations.[6]", website: "https://en.wikipedia.org/wiki/Natasha_Katz", image: "https://s3.ibdb.com/ibdb/media/person/25733/personfull_1520628207.jpg", specialty: "Lighting Design")
+Creative.create(name:"Ken Travis", bio:"Ken is a Broadway sound designer who specializes in musical reinforcement.  His system designs and soundscapes have been heard across Europe and the United States.  In 2019 Ken won The Helen Hayes Award for the Shakespeare Theater Company’s production of Camelot  and in 2013 Ken won the NAACP award for Memphis the Musical.  He has been nominated for the Henry Hewes award for Mr Burns a Post Electric Play, the NAACP award for Sister Act, the Lortel Award for Abigail's Party, and the Audelco Award for Fabulation. " , website: "https://ken-travis.squarespace.com/
+", image: "https://images.squarespace-cdn.com/content/v1/5581b26fe4b00730709c1fca/1452707823054-FBNOKAQTU3MEU2LMJDK4/ke17ZwdGBToddI8pDm48kCu8Q4lS8O33pnD5gEzjC1p7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z4YTzHvnKhyp6Da-NYroOW3ZGjoBKy3azqku80C789l0p5uBJOnOmCWBN4JfYsIDyRgxjQeFYAmi705M9cDhELC4-aHdKcegdB8ZN1kKIuBaw/Ken+Travis.jpg?format=1500w", specialty: "Sound Design")
+Creative.create(name: "Josh Marquette", bio: "The Book of Mormon, Elf, The Drowsy Chaperone, To Be Or Not To Be, Pig Farm, The Trailer Park Musical, Altar Boyz. West Coast: Robin & the 7 Hoods, Peep Show, Minsky's, Vanities. National Tours: Drowsy, Barbie Live!, Trip of Love. Associate Hair Designer: Mamma Mia! (North America), The Wedding Singer (Broadway), Dirty Rotten Scoundrels (Tour). Other NY: Show Boat @ Carnegie Hall, Encores! No, No, Nanette & Follies, numerous productions at Juilliard", website: "https://www.broadwayworld.com/people/bio/Josh-Marquette/", image: "https://www.broadwayworld.com/ezoimgfmt/cloudimages.broadwayworld.com/headshots/10189sm.jpg?dt=20210128&ezimgfmt=rs:171x213/rscb12/ng:webp/ngcb12", specialty: "Hair Design")
+Creative.create(name: " Milagros Medina-Cerdeira", bio: "Makeup design for The Rocky Horror Show; Aladdin; Tuck Everlasting; Something Rotten!; and The Rocky Horror Show. Makeup consultant for Present Laughter and Sister Act. Received Designing Women Award 2016 honoring The Affair's Costume, Hair, and Makeup Design Team.", website: "https://www.broadwayworld.com/people/bio/Milagros-Medina-Cerdeira/", specialty: "Make-Up Design")
+
+########Ain't Too Proud CreativeShow########
+CreativeShow.create(show_id: 1, creative_id: 1)
+CreativeShow.create(show_id: 1, creative_id: 2)
+CreativeShow.create(show_id: 1, creative_id: 3)
+CreativeShow.create(show_id: 1, creative_id: 4)
+CreativeShow.create(show_id: 1, creative_id: 5)
+CreativeShow.create(show_id: 1, creative_id: 6)
+CreativeShow.create(show_id: 1, creative_id: 7)
+
+########Chicago CreativeShow########
+
+CreativeShow.create(show_id: 2, creative_id: 8) 
+CreativeShow.create(show_id: 2, creative_id: 9) 
+CreativeShow.create(show_id: 2, creative_id: 10) 
+CreativeShow.create(show_id: 2, creative_id: 11)
+CreativeShow.create(show_id: 2, creative_id: 12)
+
+########Hamilton CreativeShow########
+
+CreativeShow.create(show_id: 3, creative_id: 7) 
+CreativeShow.create(show_id: 3, creative_id: 2) 
+CreativeShow.create(show_id: 3, creative_id: 13) 
+CreativeShow.create(show_id: 3, creative_id: 3)
+CreativeShow.create(show_id: 3, creative_id: 15)
+
+########Wicked CreativeShow########
+
+CreativeShow.create(show_id: 4, creative_id: 15) 
+CreativeShow.create(show_id: 4, creative_id: 16) 
+CreativeShow.create(show_id: 4, creative_id: 17) 
+CreativeShow.create(show_id: 4, creative_id: 18)
+CreativeShow.create(show_id: 4, creative_id: 19)
+CreativeShow.create(show_id: 4, creative_id: 20)
+
+########Aladdin CreativeShow########
+
+CreativeShow.create(show_id: 5, creative_id: 21) 
+CreativeShow.create(show_id: 5, creative_id: 22) 
+CreativeShow.create(show_id: 5, creative_id: 23) 
+CreativeShow.create(show_id: 5, creative_id: 24)
+CreativeShow.create(show_id: 5, creative_id: 25)
+CreativeShow.create(show_id: 5, creative_id: 26)
+
+
+########Ain't Too Proud Character#######
+
+Character.create(name: "Paul Williams", description: "(July 2, 1939 – August 17, 1973) was an American baritone singer and choreographer. Williams was noted for being one of the founding members and original lead singer of the Motown group The Temptations. Along with Elbridge Al Bryant, Otis Williams, and fellow Alabamians Eddie Kendricks and Melvin Franklin, Williams was a member of The Temptations. Personal problems and failing health forced Williams to retire in 1971. He was found dead two years later as the result of an apparent suicide.", show_id: 1)
+Character.create(name: "Melvin Franklin", description: "(October 12, 1942 – February 23, 1995) better known by the stage name Melvin Franklin, or his nickname Blue, was an American bass singer. Franklin was best known for his role as a founding member of Motown singing group The Temptations from 1960 to 1994.", show_id: 1)
+Character.create(name: "David Ruffin", description: "(born Davis Eli Ruffin,[1] January 18, 1941 – June 1, 1991) was an American soul singer and musician most famous for his work as one of the lead singers of the Temptations (1964–68) during the group's 'Classic Five'period as it was later known. He was the lead voice on such famous songs as 'My Girl' and 'Ain't Too Proud to Beg.'", show_id: 1)
+Character.create(name: "Eddie Kendricks", description: '(December 17, 1939 – October 5, 1992) was an American singer and songwriter. Noted for his distinctive falsetto singing style, Kendricks co-founded the Motown singing group The Temptations, and was one of their lead singers from 1960 until 1971. He was the lead voice on such famous songs as "The Way You Do the Things You Do", "Get Ready", and "Just My Imagination (Running Away with Me)". As a solo artist, Kendricks recorded several hits of his own during the 1970s, including the number-one single "Keep on Truckin"', show_id: 1)
+Character.create(name: "Otis Williams", description: '(born Otis Miles Jr.; October 30, 1941) is an American baritone singer.[1][2] Nicknamed "Big Daddy", he is occasionally also a songwriter and a record producer.
+
+Williams is the founder and last surviving original member of the Motown vocal group The Temptations,[1] a group in which he continues to perform; he also owns the rights to the Temptations name.', show_id: 1)
+
 
 puts "🔥 🔥 🔥 🔥 SEEDED 🔥 🔥 🔥 🔥 "
