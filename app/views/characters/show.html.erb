@@ -9,13 +9,13 @@
         <% if @character.actor_characters.empty? %>
             <%= "This role has not been cast" %>
         <% elsif %>
-            <%@character.actor_characters[0].current == false%>
-            <%= "This role has not currently been cast" %>
-        <%else%>
             <% actor = @character.actor_characters.where(current: true)%>       
                 <li>
                     <%=link_to Actor.find_by(id: actor[0][:actor_id]).name, actor_path(actor[0][:actor_id]) %>
                 </li>
+        <%else%>
+            <%@character.actor_characters[0].current == false%>
+            <%= "This role has not currently been cast" %>
         <%end%>
         
     </ul>
