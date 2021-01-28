@@ -14,6 +14,7 @@ class ActorCharactersController < ApplicationController
 
   def create
     
+    
     if params[:actor_character][:actor_id] && params[:actor_character][:character_id]
         actor = params[:actor_character][:actor_id]
         character = params[:actor_character][:character_id]

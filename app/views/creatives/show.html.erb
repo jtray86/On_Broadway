@@ -15,6 +15,7 @@
             </li>
         <%end%>
     </ul>
-
+    
     <%= button_to "Add To Team", new_creative_show_path(creative_id = @creative.id), method: "get" %>
     <%= button_to "Delete Profile", creative_path(@creative), method: "delete" %>
+   

@@ -3,7 +3,7 @@ class ShowsController < ApplicationController
   skip_before_action :authorized, only: [:index, :show]
   
   def index
-    @shows = Show.all 
+    @shows = Show.all  
 
     if params[:search]
       search = params[:search].split.map(&:capitalize).join(' ')
@@ -39,16 +39,22 @@ class ShowsController < ApplicationController
   end
 
   def edit
+ #@show = set_current_user.shows
   end
 
   def update
-    show = Show.find(params[:id])
-    show.update(show_params(:show_id, :character_id))
-    if show.valid?
-      redirect_to show_path(show)
-    else
-      flash[:message] = show.errors.full_messages 
-      redirect_to new_show_path
+    if @show == set_current_user.shows.any?
+      #show = set_current_user.shows
+      @show.update(show_params(:show_id, :character_id))
+      if @show.valid?
+        redirect_to show_path(@show)
+      else
+        flash[:message] = @show.errors.full_messages 
+        redirect_to new_show_path
+      end 
+    else 
+      redirect_to admin_path
+       
     end
   end
 

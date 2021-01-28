@@ -27,14 +27,20 @@ class CharactersController < ApplicationController
   end
 
   def update
-    character = Character.find(params[:id])
-    character.update(character_params(:character_id, :character_id))
-    if character.valid?
-      redirect_to character_path(character)
+    set_current_user.shows.each do |show|
+      if show.id == @character.show_id
+      @character = Character.find(params[:id])
+      @character.update(character_params(:character_id, :character_id))
+      if @character.valid?
+        redirect_to character_path(@character)
+      else
+        flash[:message] = @character.errors.full_messages 
+        redirect_to edit_character_path
+      end
     else
-      flash[:message] = character.errors.full_messages 
-      redirect_to edit_character_path
+      redirect_to admin_path
     end
+  end
   end
 
   private
