@@ -42,6 +42,11 @@ div.header div#login p.nologgin{
     color: rgb(245, 210, 68);
 }
 
+div.header div#login p.user a:visited{
+    color: rgb(245, 210, 68);
+    outline: none;
+}
+
 div.nav {
     margin: 0;
     padding: 0;
@@ -367,4 +372,71 @@ margin-right: auto;
 padding-bottom: 0px;
 }
 
+/*######creative_path######*/
 
+div#creativeindex h1{
+    text-align: center;
+    font-size: 35px;
+    font-family: Sans-serif;
+    background-color: rgba(198, 139, 218, 0.365);
+    padding: 0;
+    margin-top: 0;
+    border-top: .1rem solid rgba(0, 0, 0, 0.502);
+    border-bottom: .07rem solid rgba(0, 0, 0, 0.208);
+}
+
+div#creativeindex div.row{
+    display: flex;
+    border: .001rem solid rgba(0, 0, 0, 0.125);
+}
+
+div#creativeindex div.pic.column{
+    height: auto;
+    flex: 35%;
+    margin: 0;
+}
+
+div#creativeindex div.pic.column img {
+    height: auto;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2rem;
+    display: flex;
+}
+
+div#creativeindex div.row div.column.ptag{
+    flex: 65%;
+}
+
+div#creativeindex p.element{
+    border-bottom: .001rem solid rgba(0, 0, 0, 0.125);
+}
+
+/*#########Admin Show########*/
+
+div#adminshow h1{
+    text-align: center;
+    font-size: 35px;
+    font-family: Sans-serif;
+    background-color: rgba(198, 139, 218, 0.365);
+    padding: 0;
+    margin-top: 0;
+    border-top: .1rem solid rgba(0, 0, 0, 0.502);
+    border-bottom: .07rem solid rgba(0, 0, 0, 0.208);
+}
+
+div#adminshow ul{
+    border-bottom: .001rem solid rgba(0, 0, 0, 0.125);
+    padding-bottom: 1rem;
+}
+
+div#adminshow ul li{
+    list-style-type: none;
+    border: 1px solid black;
+    height: 6rem;
+    width: 14rem;
+    margin: 5px;
+    font-size: x-large;
+    padding: 1rem;
+}

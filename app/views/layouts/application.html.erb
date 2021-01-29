@@ -18,7 +18,7 @@
         </a>
         <div id="login">
         <% if check_for_login %>
-          <p class="user"> <%= set_current_user.name %> is logged in </p>
+          <p class="user"> <%= link_to set_current_user.name, admin_path(set_current_user) %> is logged in </p>
           <%= button_to "Log out", logout_path, method: "delete" %>
         <% else %>
             <p class="nologgin">Someone is NOT logged in </p>

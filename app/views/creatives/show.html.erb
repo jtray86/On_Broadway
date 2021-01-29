@@ -1,14 +1,18 @@
-<h1><%=@creative.name%></h1>
+<div id="creativeindex">
+    <h1><%=@creative.name%></h1>
+    <div class="row">
+        <div class= "pic column"> 
+            <img src=<%=@creative.image%> alt=<%=@creative.name%> />
+        </div>
 
-<div> 
-    <img src=<%=@creative.image%> alt=<%=@creative.name%> />
-</div>
+        <div class="column ptag">
+            <p><%= @creative.bio %> </p>
+            </div> 
+    </div>  
 
-<p><%= @creative.bio %> </p>
+    <p class="element"><a href = "<%=@creative.website%>"><%=@creative.website%> </a></p>
 
-<p><a href = "<%=@creative.website%>"><%=@creative.website%> </a></p>
-
-<ul>
+    <ul class="element">
         <% @creative.shows.each do |show| %>
             <li>
                 Show -- <%= link_to show.name, show_path(show)%>
