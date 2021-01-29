@@ -857,6 +857,7 @@ Actor.create(name: "Sterling Jarvis", bio: "Broadway: Debut!! Credits include: H
 ActorCharacter.create(actor_id: 81, character_id: 81, current: true)
 
 
+<<<<<<< HEAD
 
 Character.create(name: "General", description: "A cut-throat, dangerous warlord that terrorizes the local village.", show_id: 9)
 
@@ -1158,4 +1159,6 @@ ActorCharacter.create(actor_id: 110, character_id: 110, current: true)
 Actor.create(name: "Alex Marz", bio: "Alex is an actor based in New York City. Off-Broadway: Othello the Remix NYC: Macbeth, Alkestis (The Connelly Theater), Conway (Theaterlab), Black Garden (The Tank), Orientalism (Manhattan Rep) Paris: Black Garden (Théâtre de l'Opprimé) Alex has been a part of workshops and readings at Roundabout, La Mama, New York Theatre Workshop, Ensemble Studio Theatre, The Huntington Theater, and Williamstown Theater Festival. TV: Officer Vogel on Blue Bloods. Alex holds an MFA in Acting from Columbia University. Proud member of AEA and SAG/AFTRA.", website: "https://www.imdb.com/name/nm9542537/?ref_=fn_al_nm_1", image: "https://m.media-amazon.com/images/M/MV5BYjA1ZTI5ODAtY2EwYy00NTU4LTg3ZjAtY2M2YTFkM2NhMzJiXkEyXkFqcGdeQXVyODY4MzUyMDk@._V1_UY317_CR91,0,214,317_AL_.jpg")
 
 
+=======
+>>>>>>> creative-css
 puts "🔥 🔥 🔥 🔥 SEEDED 🔥 🔥 🔥 🔥 "
